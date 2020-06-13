@@ -168,7 +168,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="运行测试（注意，如果使用了LoongEgg-LoongLogger可以在输出中跟踪程序运行情况）"><a href="#运行测试（注意，如果使用了LoongEgg-LoongLogger可以在输出中跟踪程序运行情况）" class="headerlink" title="运行测试（注意，如果使用了LoongEgg.LoongLogger可以在输出中跟踪程序运行情况）"></a>运行测试（注意，如果使用了LoongEgg.LoongLogger可以在输出中跟踪程序运行情况）</h2><h3 id="1-启动WPF程序"><a href="#1-启动WPF程序" class="headerlink" title="1.启动WPF程序"></a>1.启动WPF程序</h3><h3 id="2-启动前面创建的接受客户端"><a href="#2-启动前面创建的接受客户端" class="headerlink" title="2.启动前面创建的接受客户端"></a>2.启动前面创建的<a href="https://loongegg.github.io/2020/06/13/C-Udp-2-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%88%9B%E5%BB%BA/">接受客户端</a></h3><h3 id="3-拖动GPS的Slider条检查程序运行情况"><a href="#3-拖动GPS的Slider条检查程序运行情况" class="headerlink" title="3.拖动GPS的Slider条检查程序运行情况"></a>3.拖动GPS的Slider条检查程序运行情况</h3>]]></content>
+<h2 id="运行测试（注意，如果使用了LoongEgg-LoongLog可以在输出中跟踪程序运行情况）"><a href="#运行测试（注意，如果使用了LoongEgg-LoongLog可以在输出中跟踪程序运行情况）" class="headerlink" title="运行测试（注意，如果使用了LoongEgg.LoongLog可以在输出中跟踪程序运行情况）"></a>运行测试（注意，如果使用了LoongEgg.LoongLog可以在输出中跟踪程序运行情况）</h2><h3 id="1-启动WPF程序"><a href="#1-启动WPF程序" class="headerlink" title="1.启动WPF程序"></a>1.启动WPF程序</h3><h3 id="2-启动前面创建的接受客户端"><a href="#2-启动前面创建的接受客户端" class="headerlink" title="2.启动前面创建的接受客户端"></a>2.启动前面创建的<a href="https://loongegg.github.io/2020/06/13/C-Udp-2-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%88%9B%E5%BB%BA/">接受客户端</a></h3><h3 id="3-拖动GPS的Slider条检查程序运行情况"><a href="#3-拖动GPS的Slider条检查程序运行情况" class="headerlink" title="3.拖动GPS的Slider条检查程序运行情况"></a>3.拖动GPS的Slider条检查程序运行情况</h3>]]></content>
       <categories>
         <category>C#/UDP</category>
       </categories>
