@@ -49,7 +49,7 @@
     
     <title>
         
-            C#/Udp-1.收发通信的实现 | Loong Egg Innovation
+            C#/Udp-1.收发通信的实现 | Loong Egg
         
     </title>
     
@@ -60,7 +60,7 @@
   <header class="mdui-appbar mdui-appbar-fixed">
   <div id="toolbar" class="mdui-toolbar mdui-color-theme">
     <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
-    <a href="/" class="mdui-typo-headline">Loong Egg Innovation</a>
+    <a href="/" class="mdui-typo-headline">Loong Egg</a>
     <a href="/" class="header-subtitle mdui-typo-headline"></a>
     <div class="mdui-toolbar-spacer"></div>
     <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
@@ -119,14 +119,6 @@
                 </a>
             
                 
-                <a href="/tools/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-tools"></i>
-                    </div>
-                    <div class="mdui-list-item-content">工具箱</div>
-                </a>
-            
-                
                 <a href="/about/" class="mdui-list-item mdui-ripple">
                     <div class="mdui-list-item-icon">
                         <i class="iconfont icon-user"></i>
@@ -163,25 +155,13 @@
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
-                    <a href="mailto:xxx@xxx.com" class="mdui-chip-title">E-Mail</a>
+                    <a href="mailto:loongegg@163.com" class="mdui-chip-title">E-Mail</a>
                 </div>
             
                 
                 <div class="mdui-chip">
                     <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
-                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">Weibo</a>
+                    <a href="https://github.com/loongEgg" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
                 </div>
             
         </div>
@@ -231,7 +211,7 @@
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
+      分类于:&nbsp;<a class="category-link" href="/categories/C-UDP/">C#/UDP</a>
     </span>
     
       <span>
@@ -268,7 +248,7 @@
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/&title=C#/Udp-1.收发通信的实现" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg Innovation&title=C#/Udp-1.收发通信的实现&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg&title=C#/Udp-1.收发通信的实现&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
           <a href="https://telegram.me/share/url?url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/&text=C#/Udp-1.收发通信的实现" target="_blank" class="mdui-ripple">分享到 Telegram</a>
@@ -284,7 +264,11 @@
   <div class="post-tags">
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C-UDP/ >C#, UDP</a>
+        <a rel="tag" href = /tags/C/ >C#</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/UDP/ >UDP</a>
       </i>
     
   </div>
@@ -297,9 +281,7 @@
 <li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
 <li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong><h3 id="4-项目依赖（Dependency）"><a href="#4-项目依赖（Dependency）" class="headerlink" title="4. 项目依赖（Dependency）"></a>4. 项目依赖（Dependency）</h3></li>
 <li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
-<li><strong>Newtonsoft.Json</strong></li>
-</ul>
-<h3 id="5-项目地址-Source-code"><a href="#5-项目地址-Source-code" class="headerlink" title="5. 项目地址(Source code)"></a>5. 项目地址(Source code)<br></h3><ul>
+<li><strong>Newtonsoft.Json</strong><h3 id="5-项目地址-Source-code"><a href="#5-项目地址-Source-code" class="headerlink" title="5. 项目地址(Source code)"></a>5. 项目地址(Source code)<br></h3></li>
 <li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> <h3 id="6-发行版获取"><a href="#6-发行版获取" class="headerlink" title="6. 发行版获取"></a>6. 发行版获取</h3></li>
 <li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
 </ul>
@@ -342,52 +324,6 @@
   </div>
 
 
-
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-      <div class="mdui-tab" mdui-tab>
-        
-          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
-        
-          <a href="#comment-tab1" class="mdui-ripple">livere</a>
-        
-      </div>
-      
-        <div id="comment-tab0" class="mdui-p-a-2">
-          <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
-<script>
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
-    id:  md5(location.pathname) ,
-    distractionFreeMode: 'true',
-  });
-  gitalk.render('gitalk-container');
-</script>
-        </div>
-      
-        <div id="comment-tab1" class="mdui-p-a-2">
-          <div id="lv-container" data-id="city" data-uid="">
-  <script type="text/javascript">
-    (function (d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-      if (typeof LivereTower === 'function') { return; }
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-      e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-  </script>
-  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
-</div>
-        </div>
-      
-    </div>
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
