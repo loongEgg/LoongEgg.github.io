@@ -49,7 +49,7 @@
     
     <title>
         
-            C#/Udp-1.收发通信的实现 | Loong Egg
+            C#/Udp-1.收发通信基础库的实现 | Loong Egg
         
     </title>
     
@@ -199,7 +199,7 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/">C#/Udp-1.收发通信的实现</a>
+  <a class="post-header-title" href="/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/">C#/Udp-1.收发通信基础库的实现</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
@@ -233,25 +233,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=C#/Udp-1.收发通信的实现&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/&pic=https://LoongEgg.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=C#/Udp-1.收发通信基础库的实现&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/&pic=https://LoongEgg.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=C#/Udp-1.收发通信的实现&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/&via=Loong Egg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=C#/Udp-1.收发通信基础库的实现&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/&via=Loong Egg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/&title=C#/Udp-1.收发通信的实现" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/&title=C#/Udp-1.收发通信基础库的实现" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg&title=C#/Udp-1.收发通信的实现&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg&title=C#/Udp-1.收发通信基础库的实现&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/&text=C#/Udp-1.收发通信的实现" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://loongegg.github.io/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/&text=C#/Udp-1.收发通信基础库的实现" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -276,13 +276,19 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1. 系列主题"></a>1. 系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
-<h3 id="2-本文主题"><a href="#2-本文主题" class="headerlink" title="2. 本文主题"></a>2. 本文主题</h3><p>基本UDP收发通信的实现</p>
+<h3 id="2-本文主题"><a href="#2-本文主题" class="headerlink" title="2. 本文主题"></a>2. 本文主题</h3><p>基本UDP收发通信基础库的实现</p>
 <h3 id="3-目标框架-target-framework"><a href="#3-目标框架-target-framework" class="headerlink" title="3. 目标框架(target framework)"></a>3. 目标框架(target framework)</h3><ul>
 <li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
-<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong><h3 id="4-项目依赖（Dependency）"><a href="#4-项目依赖（Dependency）" class="headerlink" title="4. 项目依赖（Dependency）"></a>4. 项目依赖（Dependency）</h3></li>
+<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
+</ul>
+<h3 id="4-项目依赖（Dependency）"><a href="#4-项目依赖（Dependency）" class="headerlink" title="4. 项目依赖（Dependency）"></a>4. 项目依赖（Dependency）</h3><ul>
 <li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
-<li><strong>Newtonsoft.Json</strong><h3 id="5-项目地址-Source-code"><a href="#5-项目地址-Source-code" class="headerlink" title="5. 项目地址(Source code)"></a>5. 项目地址(Source code)<br></h3></li>
-<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> <h3 id="6-发行版获取"><a href="#6-发行版获取" class="headerlink" title="6. 发行版获取"></a>6. 发行版获取</h3></li>
+<li><strong>Newtonsoft.Json</strong></li>
+</ul>
+<h3 id="5-项目地址-Source-code"><a href="#5-项目地址-Source-code" class="headerlink" title="5. 项目地址(Source code)"></a>5. 项目地址(Source code)<br></h3><ul>
+<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
+</ul>
+<h3 id="6-发行版获取"><a href="#6-发行版获取" class="headerlink" title="6. 发行版获取"></a>6. 发行版获取</h3><ul>
 <li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
 </ul>
 <hr>
@@ -305,6 +311,11 @@
   
   <nav>
     
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/13/C-Udp-2-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%88%9B%E5%BB%BA/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>C#/Udp-2.收发通信客户端的创建</span>
+      </a>
+    
     
   </nav>
 </article>
@@ -316,7 +327,7 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <a href="/2020/06/13/C-Udp-1-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/" id="toc-header" class="mdui-ripple">文章目录</a>
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-系列主题"><span class="toc-number">1.1.</span> <span class="toc-text">1. 系列主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-本文主题"><span class="toc-number">1.2.</span> <span class="toc-text">2. 本文主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-目标框架-target-framework"><span class="toc-number">1.3.</span> <span class="toc-text">3. 目标框架(target framework)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-项目依赖（Dependency）"><span class="toc-number">1.4.</span> <span class="toc-text">4. 项目依赖（Dependency）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-项目地址-Source-code"><span class="toc-number">1.5.</span> <span class="toc-text">5. 项目地址(Source code)
 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-发行版获取"><span class="toc-number">1.6.</span> <span class="toc-text">6. 发行版获取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UdpSender-cs"><span class="toc-number">2.</span> <span class="toc-text">UdpSender.cs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Properties"><span class="toc-number">2.1.</span> <span class="toc-text">1.Properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Constructors"><span class="toc-number">2.2.</span> <span class="toc-text">2.Constructors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Public-Methods"><span class="toc-number">2.3.</span> <span class="toc-text">3.Public Methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Private-Methods"><span class="toc-number">2.4.</span> <span class="toc-text">4. Private Methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UdpReceiver-cs"><span class="toc-number">3.</span> <span class="toc-text">UdpReceiver.cs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Properties-1"><span class="toc-number">3.1.</span> <span class="toc-text">1.Properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Constructors-1"><span class="toc-number">3.2.</span> <span class="toc-text">2.Constructors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Public-Methods-1"><span class="toc-number">3.3.</span> <span class="toc-text">3.Public Methods</span></a></li></ol></li></ol>
       </li>
