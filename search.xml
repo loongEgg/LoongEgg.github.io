@@ -70,40 +70,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C#/Udp-4.WPF发送端</title>
-    <url>/2020/06/13/C-Udp-4-WPF%E5%8F%91%E9%80%81%E7%AB%AF/</url>
-    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  创建WPF/C#的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1. 系列主题"></a>1. 系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
-<h3 id="2-本文主题"><a href="#2-本文主题" class="headerlink" title="2. 本文主题"></a>2. 本文主题</h3><p>class类到json的序列化与反序列化</p>
-<h3 id="3-目标框架-target-framework"><a href="#3-目标框架-target-framework" class="headerlink" title="3. 目标框架(target framework)"></a>3. 目标框架(target framework)</h3><ul>
-<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
-<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
-</ul>
-<h3 id="4-项目依赖（Dependency）"><a href="#4-项目依赖（Dependency）" class="headerlink" title="4. 项目依赖（Dependency）"></a>4. 项目依赖（Dependency）</h3><ul>
-<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
-<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
-<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
-<li><strong>Newtonsoft.Json</strong></li>
-</ul>
-<h3 id="5-项目地址-Source-code"><a href="#5-项目地址-Source-code" class="headerlink" title="5. 项目地址(Source code)"></a>5. 项目地址(Source code)<br></h3><ul>
-<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
-</ul>
-<h3 id="6-发行版获取"><a href="#6-发行版获取" class="headerlink" title="6. 发行版获取"></a>6. 发行版获取</h3><ul>
-<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
-</ul>
-<hr>
-]]></content>
-      <categories>
-        <category>C#/UDP</category>
-      </categories>
-      <tags>
-        <tag>C#</tag>
-        <tag>UDP</tag>
-        <tag>json</tag>
-        <tag>WPF</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C#/Udp-3.class类到json的序列化与反序列化</title>
     <url>/2020/06/13/C-Udp-3-class%E7%B1%BB%E5%88%B0json%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</url>
     <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>class类到json的序列化与反序列化</p>
@@ -137,6 +103,41 @@
         <tag>C#</tag>
         <tag>UDP</tag>
         <tag>json</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C#/Udp-4.WPF发送端</title>
+    <url>/2020/06/13/C-Udp-4-WPF%E5%8F%91%E9%80%81%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="创建WPF-C-的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定"><a href="#创建WPF-C-的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定" class="headerlink" title="  创建WPF/C#的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定"></a>  创建WPF/C#的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1. 系列主题"></a>1. 系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
+<h3 id="2-本文主题"><a href="#2-本文主题" class="headerlink" title="2. 本文主题"></a>2. 本文主题</h3><p>class类到json的序列化与反序列化</p>
+<h3 id="3-目标框架-target-framework"><a href="#3-目标框架-target-framework" class="headerlink" title="3. 目标框架(target framework)"></a>3. 目标框架(target framework)</h3><ul>
+<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
+<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
+</ul>
+<h3 id="4-项目依赖（Dependency）"><a href="#4-项目依赖（Dependency）" class="headerlink" title="4. 项目依赖（Dependency）"></a>4. 项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
+<li><strong>Newtonsoft.Json</strong></li>
+</ul>
+<h3 id="5-项目地址-Source-code"><a href="#5-项目地址-Source-code" class="headerlink" title="5. 项目地址(Source code)"></a>5. 项目地址(Source code)<br></h3><ul>
+<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
+</ul>
+<h3 id="6-发行版获取"><a href="#6-发行版获取" class="headerlink" title="6. 发行版获取"></a>6. 发行版获取</h3><ul>
+<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<hr>
+<h2 id="ViewModelS"><a href="#ViewModelS" class="headerlink" title="ViewModelS"></a>ViewModelS</h2><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.MvvmCore;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> | 个人微信：InnerGeeker</span></span><br><span class="line"><span class="comment"> | 联系邮箱：LoongEgg@163.com </span></span><br><span class="line"><span class="comment"> | 创建时间：2020/6/13 17:00:07</span></span><br><span class="line"><span class="comment"> | 主要用途：</span></span><br><span class="line"><span class="comment"> | 更改记录：</span></span><br><span class="line"><span class="comment"> |			 时间		版本		更改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpJsonSender.WPF</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AltViewModel</span> : <span class="title">ViewModel</span></span><br><span class="line">    &#123; </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Name</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Name; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Name, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">string</span> _Name; </span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Unit</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Unit; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Unit, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">string</span> _Unit;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Maximum</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Maximum; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Maximum, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">double</span> _Maximum;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Minimum</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Minimum; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Minimum, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">double</span> _Minimum;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Readout</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Readout; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Readout, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">double</span> _Readout;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.MvvmCore;</span><br><span class="line"><span class="keyword">using</span> LoongEgg.UdpCore;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> | 个人微信：InnerGeeker</span></span><br><span class="line"><span class="comment"> | 联系邮箱：LoongEgg@163.com </span></span><br><span class="line"><span class="comment"> | 创建时间：2020/6/13 17:11:16</span></span><br><span class="line"><span class="comment"> | 主要用途：</span></span><br><span class="line"><span class="comment"> | 更改记录：</span></span><br><span class="line"><span class="comment"> |			 时间		版本		更改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpJsonSender.WPF</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AltPackViewModel</span> : <span class="title">ViewModel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">internal</span> <span class="keyword">static</span> AltPackViewModel DesignInstance &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">        = <span class="keyword">new</span> AltPackViewModel(JsonPackConfig.DeserializeFromFile(<span class="string">@"E:\Published\LoongEgg.UdpCore\UdpJsonSender.WPF\AltPack.json"</span>)); <span class="comment">// 根据你自己实际的文件路径写</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> PackName</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _PackName; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _PackName, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">string</span> _PackName;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">byte</span> PackId</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _PackId; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _PackId, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">byte</span> _PackId;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> AltViewModel Gps &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> AltViewModel Baro &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">AltPackViewModel</span>(<span class="params">JsonPackConfig config</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Gps = <span class="keyword">new</span> AltViewModel</span><br><span class="line">            &#123;</span><br><span class="line">                Name = config.Items[<span class="number">0</span>].Name,</span><br><span class="line">                Unit = config.Items[<span class="number">0</span>].Unit,</span><br><span class="line">                Minimum = config.Items[<span class="number">0</span>].Minimum,</span><br><span class="line">                Maximum = config.Items[<span class="number">0</span>].Maximum</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            Baro = <span class="keyword">new</span> AltViewModel</span><br><span class="line">            &#123;</span><br><span class="line">                Name = config.Items[<span class="number">1</span>].Name,</span><br><span class="line">                Unit = config.Items[<span class="number">1</span>].Unit,</span><br><span class="line">                Minimum = config.Items[<span class="number">1</span>].Minimum,</span><br><span class="line">                Maximum = config.Items[<span class="number">1</span>].Maximum</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            PackName = config.PackName;</span><br><span class="line">            PackId = config.PackID;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C#/UDP</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>UDP</tag>
+        <tag>json</tag>
+        <tag>WPF</tag>
       </tags>
   </entry>
 </search>
