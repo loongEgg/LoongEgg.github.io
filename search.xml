@@ -80,6 +80,8 @@
 <li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
 </ul>
 <h3 id="4-项目依赖（Dependency）"><a href="#4-项目依赖（Dependency）" class="headerlink" title="4. 项目依赖（Dependency）"></a>4. 项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
 <li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
 <li><strong>Newtonsoft.Json</strong></li>
 </ul>
