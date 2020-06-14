@@ -268,11 +268,15 @@
 <li>注意<br>本文章写于2020年，基于WSL中的ubuntu18.04LTS, 目标为.netcore 3.1 sdk<br>可能缺少一些插件比如C#在VS Code插件中安装，有些插件会自动提示安装，要记得点yes比如VS code的WSL插件</li>
 </ul>
 <hr>
-<h2 id="1-dotnetcore-sdk-安装"><a href="#1-dotnetcore-sdk-安装" class="headerlink" title="1.dotnetcore sdk 安装"></a>1.dotnetcore sdk 安装</h2><ul>
-<li>官网信息<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu</a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br></pre></td></tr></table></figure>
+<div class="mdui-video-container">
+<iframe src="//player.bilibili.com/player.html?aid=668616999&bvid=BV1Ba4y1Y7g9&cid=201927797&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> 
+</div>
 
-</li>
+<h2 id="1-dotnetcore-sdk-安装"><a href="#1-dotnetcore-sdk-安装" class="headerlink" title="1.dotnetcore sdk 安装"></a>1.dotnetcore sdk 安装</h2><ul>
+<li>官网信息<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu</a></li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update; \</span><br><span class="line">sudo apt-get install -y apt-transport-https &amp;&amp; \</span><br><span class="line">sudo apt-get update &amp;&amp; \</span><br><span class="line">sudo apt-get install -y dotnet-sdk-3.1</span><br></pre></td></tr></table></figure>
 <ul>
 <li>检查安装情况 dotnet -v<h2 id="2-创建-netcore-console"><a href="#2-创建-netcore-console" class="headerlink" title="2.创建.netcore console"></a>2.创建.netcore console</h2></li>
