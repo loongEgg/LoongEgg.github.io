@@ -36,6 +36,38 @@
       </tags>
   </entry>
   <entry>
+    <title>C#/Udp-2.收发通信客户端的创建</title>
+    <url>/2020/06/13/C-Udp-2-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="基本UDP收发通信客户端的创建"><a href="#基本UDP收发通信客户端的创建" class="headerlink" title="基本UDP收发通信客户端的创建"></a>基本UDP收发通信客户端的创建</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
+<h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
+<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
+<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
+</ul>
+<h3 id="3-项目依赖（Dependency）"><a href="#3-项目依赖（Dependency）" class="headerlink" title="3.项目依赖（Dependency）"></a>3.项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
+<li><strong>Newtonsoft.Json</strong></li>
+</ul>
+<h3 id="4-项目地址-Source-code"><a href="#4-项目地址-Source-code" class="headerlink" title="4.项目地址(Source code)"></a>4.项目地址(Source code)<br></h3><ul>
+<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
+</ul>
+<h3 id="5-发行版获取"><a href="#5-发行版获取" class="headerlink" title="5.发行版获取"></a>5.发行版获取</h3><ul>
+<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<hr>
+<h2 id="发送端"><a href="#发送端" class="headerlink" title="发送端"></a>发送端</h2><h3 id="Program-cs"><a href="#Program-cs" class="headerlink" title="Program.cs"></a>Program.cs</h3><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpSender.Net45</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello World!"</span>);</span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger | Loggers.DebugLogger);</span><br><span class="line">            <span class="keyword">var</span> sender = <span class="keyword">new</span> LoongEgg.UdpCore.UdpSender(<span class="number">2233</span>, <span class="literal">true</span>);</span><br><span class="line">            <span class="keyword">bool</span> stop = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">do</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"Enter a message or stop/s to exit"</span>);</span><br><span class="line">                <span class="keyword">string</span> input = Console.ReadLine();</span><br><span class="line">                stop = input.ToLower() == <span class="string">"stop"</span> | input.ToLower() == <span class="string">"s"</span>;</span><br><span class="line">                sender.SendAsync(<span class="string">$"<span class="subst">&#123;input&#125;</span>"</span>);</span><br><span class="line">            &#125; <span class="keyword">while</span> (!stop);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h2><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpReceiver.Net45</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger | Loggers.DebugLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> LoongEgg.UdpCore.UdpReceiver(<span class="number">2233</span>);</span><br><span class="line">            receiver.ReaderAsync().Wait();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"Good bye~"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+]]></content>
+      <categories>
+        <category>C#/UDP</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>UDP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C#/Udp-3.class类到json的序列化与反序列化</title>
     <url>/2020/06/13/C-Udp-3-class%E7%B1%BB%E5%88%B0json%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</url>
     <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="class类到json的序列化与反序列化"><a href="#class类到json的序列化与反序列化" class="headerlink" title="class类到json的序列化与反序列化"></a>class类到json的序列化与反序列化</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
@@ -71,35 +103,163 @@
       </tags>
   </entry>
   <entry>
-    <title>C#/Udp-2.收发通信客户端的创建</title>
-    <url>/2020/06/13/C-Udp-2-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
-    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="基本UDP收发通信客户端的创建"><a href="#基本UDP收发通信客户端的创建" class="headerlink" title="基本UDP收发通信客户端的创建"></a>基本UDP收发通信客户端的创建</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
+    <title>C#/Udp-6.在linux中运行.netcore版的接收器</title>
+    <url>/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  踩坑，填坑，在VS中创建跨平台的.netcore的UdpReceiver控制台实例，running in linux</p>
+<h3 id="注意（Caution-大写加粗）"><a href="#注意（Caution-大写加粗）" class="headerlink" title="注意（Caution, 大写加粗）"></a>注意（Caution, 大写加粗）</h3><p>由于引用的Newtonsoft.Json在VS Code使用Nuget添加引用会造成大坑（这就是我一直抵触SB无脑Nuget的原因, 倡导使用简单的库，而不是牛逼但是复杂，出了天坑都不会填），但是在VisualStudio中使用没有问题（所以怪我不会正确引用？）</p>
+<ul>
+<li>BUG in VS Code when using nuget to add reference<blockquote>
+<p>‘Newtonsoft.Json’ already has a dependency defined for ‘Microsoft.CSharp’    </p>
+</blockquote>
+</li>
+</ul>
+<p>更糟糕的是，我看了官方的issues，人家说这个不是bug，而且由于这个牛逼的库包含在了.NetCore 3.0 的Microsoft.Sharp中，所以可能只要你在自己的库中依赖过之后，再引用自己的库中都会完蛋。</p>
+<hr>
+<div class="mdui-video-container">
+<iframe src="//player.bilibili.com/player.html?bvid=BV1qp4y1D7av&cid=201853226&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
 <h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
 <li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
 <li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
 </ul>
 <h3 id="3-项目依赖（Dependency）"><a href="#3-项目依赖（Dependency）" class="headerlink" title="3.项目依赖（Dependency）"></a>3.项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
 <li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
 <li><strong>Newtonsoft.Json</strong></li>
 </ul>
 <h3 id="4-项目地址-Source-code"><a href="#4-项目地址-Source-code" class="headerlink" title="4.项目地址(Source code)"></a>4.项目地址(Source code)<br></h3><ul>
 <li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
 </ul>
-<h3 id="5-发行版获取"><a href="#5-发行版获取" class="headerlink" title="5.发行版获取"></a>5.发行版获取</h3><ul>
+<h3 id="5-发行版获取（Realse）"><a href="#5-发行版获取（Realse）" class="headerlink" title="5.发行版获取（Realse）"></a>5.发行版获取（Realse）</h3><ul>
 <li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
 </ul>
 <hr>
-<h2 id="发送端"><a href="#发送端" class="headerlink" title="发送端"></a>发送端</h2><h3 id="Program-cs"><a href="#Program-cs" class="headerlink" title="Program.cs"></a>Program.cs</h3><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpSender.Net45</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello World!"</span>);</span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger | Loggers.DebugLogger);</span><br><span class="line">            <span class="keyword">var</span> sender = <span class="keyword">new</span> LoongEgg.UdpCore.UdpSender(<span class="number">2233</span>, <span class="literal">true</span>);</span><br><span class="line">            <span class="keyword">bool</span> stop = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">do</span></span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"Enter a message or stop/s to exit"</span>);</span><br><span class="line">                <span class="keyword">string</span> input = Console.ReadLine();</span><br><span class="line">                stop = input.ToLower() == <span class="string">"stop"</span> | input.ToLower() == <span class="string">"s"</span>;</span><br><span class="line">                sender.SendAsync(<span class="string">$"<span class="subst">&#123;input&#125;</span>"</span>);</span><br><span class="line">            &#125; <span class="keyword">while</span> (!stop);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h2><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpReceiver.Net45</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger | Loggers.DebugLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> LoongEgg.UdpCore.UdpReceiver(<span class="number">2233</span>);</span><br><span class="line">            receiver.ReaderAsync().Wait();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"Good bye~"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
+<h2 id="解决方案（Solution）"><a href="#解决方案（Solution）" class="headerlink" title="解决方案（Solution）"></a>解决方案（Solution）</h2><h3 id="1-在VS中创建跨平台应用-Creat-a-netcore-console-in-VS"><a href="#1-在VS中创建跨平台应用-Creat-a-netcore-console-in-VS" class="headerlink" title="1.在VS中创建跨平台应用(Creat a .netcore console in VS)"></a>1.在VS中创建跨平台应用(Creat a .netcore console in VS)</h3><ul>
+<li>添加 &gt; 新建项目 &gt; .netcore &gt; console</li>
+<li>添加引用, nuget search and install <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<p><strong>坑爹提醒(Caution, super buggy)</strong></p>
+<ul>
+<li>在linux的.netcore sdk 3.0 <strong>DO NOT SUPPORT</strong>.netcore 2.0 app, 所以只能使用VS2019创建.netcore3.0的console<br>是不是开发python划时代的2.0-&gt;3.0的那波人跑去开发C#了，各种割裂</li>
+<li>在VS2019中引用的包的依赖，无法在Nuget中更新</li>
+<li>VS2019创建的项目，在linux中<code>dotnet run</code>后，VS中会出错，只能重生成<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpReceiver.Net45</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> LoongEgg.UdpCore.UdpReceiver(<span class="number">2233</span>);</span><br><span class="line">            receiver.ReaderAsync().Wait();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"Good bye~"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>生成项目(build)</li>
+</ul>
+<h3 id="2-在linux中运行（running-in-linux）"><a href="#2-在linux中运行（running-in-linux）" class="headerlink" title="2.在linux中运行（running in linux）"></a>2.在linux中运行（running in linux）</h3><blockquote>
+<p>使用Windows 10中的WSL安装的<strong>Ubuntu18.04LTS</strong>为例，很多新东西都是坑，能不作就不要作</p>
+</blockquote>
+<h4 id="WSL-Ubuntun-command-tips"><a href="#WSL-Ubuntun-command-tips" class="headerlink" title="WSL Ubuntun command tips:"></a>WSL Ubuntun command tips:</h4><ul>
+<li><code>ls</code> 查看当前目录下有什么鬼东西</li>
+<li><code>cd /mnt</code> goto my computer</li>
+<li><code>cd d</code> goto driver D</li>
+<li><code>cd ..</code> 返回上一级</li>
+<li><code>cd FOLDER_NAME</code> 移动到指定的文件夹</li>
+<li><code>dotnet new console</code> 在当前目录下创建一个.netcore控制台，项目名称与目录名称相同</li>
+<li><code>dotnet run</code> 运行.netcore程序，当前目录必须要有.netcore项目，并且有PROJECT_NAME.csproject文件</li>
+<li><code>clear</code> 清屏<h4 id="Move-to-YOU-SOLUTION-FOLDER-in-wsl"><a href="#Move-to-YOU-SOLUTION-FOLDER-in-wsl" class="headerlink" title="Move to YOU_SOLUTION_FOLDER in wsl"></a>Move to YOU_SOLUTION_FOLDER in wsl</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">king@DESKTOP-N1M9MC7:~$ <span class="built_in">cd</span> /mnt/e</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e$ <span class="built_in">cd</span> linux/UdpReceiver.NetCoreLinux/</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e/linux/UdpReceiver.NetCoreLinux$ ls</span><br><span class="line">Program.cs  UdpReceiver.NetCoreLinux.csproj  bin  obj</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e/linux/UdpReceiver.NetCoreLinux$ dotnet run</span><br><span class="line">FXXK M$!</span><br><span class="line">06/14/2020 10:40:33 [ Info ] -&gt; E:\Published\LoongEgg.UdpCore\LoongEgg.UdpCore\UdpReceiver.cs &gt; .ctor() &gt; <span class="keyword">in</span> line[ 41]: Listening to Port=2233, GroupAddress=</span><br><span class="line">06/14/2020 10:40:33 [ Dbug ] -&gt; E:\Published\LoongEgg.UdpCore\LoongEgg.UdpCore\UdpReceiver.cs &gt; ReaderAsync() &gt; <span class="keyword">in</span> line[ 61]: Listening...</span><br></pre></td></tr></table></figure>
+<h2 id="坑爹提醒（Caution-super-buggy"><a href="#坑爹提醒（Caution-super-buggy" class="headerlink" title="坑爹提醒（Caution, super buggy)"></a>坑爹提醒（Caution, super buggy)</h2>重启VS，重开.sln不然满屏错误（reopen .sln）</li>
+</ul>
 ]]></content>
       <categories>
         <category>C#/UDP</category>
       </categories>
       <tags>
         <tag>C#</tag>
-        <tag>UDP</tag>
+        <tag>.netcore</tag>
+        <tag>linux</tag>
+        <tag>cross platform</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在Windows中使用VSCode远程开发ubuntu中的.netcore项目</title>
+    <url>/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+<li>特点<br>文件在windows中方便管理，开发环境在linux调试效果真实</li>
+<li>注意<br>本文章写于2020年，基于WSL中的ubuntu18.04LTS, 目标为.netcore 3.1 sdk<br>可能缺少一些插件比如C#在VS Code插件中安装，有些插件会自动提示安装，要记得点yes比如VS code的WSL插件</li>
+</ul>
+<hr>
+<h2 id="1-dotnetcore-sdk-安装"><a href="#1-dotnetcore-sdk-安装" class="headerlink" title="1.dotnetcore sdk 安装"></a>1.dotnetcore sdk 安装</h2><ul>
+<li>官网信息<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu</a><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update; \</span><br><span class="line">sudo apt-get install -y apt-transport-https &amp;&amp; \</span><br><span class="line">sudo apt-get update &amp;&amp; \</span><br><span class="line">sudo apt-get install -y dotnet-sdk-3.1</span><br></pre></td></tr></table></figure>
+<ul>
+<li>检查安装情况 dotnet -v<h2 id="2-创建-netcore-console"><a href="#2-创建-netcore-console" class="headerlink" title="2.创建.netcore console"></a>2.创建.netcore console</h2></li>
+<li>在Windows中某一盘下面，比如我在e:\linux\netcoretest\创建了一个文件夹</li>
+<li>在linux下移动进去 cd /mnt/e/linux/netcoretest</li>
+<li>在linux下创建项目 dotnet new console</li>
+<li>在linux下运行项目 dotnet run 会显示：<blockquote>
+<p>Hello World!</p>
+</blockquote>
+</li>
+<li>在windows下打开文件夹<ul>
+<li>更改Hello World!为Hello loongegg.github.io!并保存</li>
+</ul>
+</li>
+<li>在linux下运行项目输出  dotnet run  会显示：<blockquote>
+<p>Hello loongegg.github.io!</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>在Windows中安装Linux子系统和VSCode</title>
+    <url>/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/</url>
+    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+<li>特点<br>基于WSL安装，不需要虚拟机，不需要双系统</li>
+<li>步骤<br>WSL功能启用, Ubuntu系统安装，换源，VS Code安装</li>
+</ul>
+<hr>
+<h2 id="1-WSL功能启用"><a href="#1-WSL功能启用" class="headerlink" title="1.WSL功能启用"></a>1.WSL功能启用</h2><p>开始菜单 &gt; 设置 &gt; 应用 &gt; 程序和功能(右上角) &gt; 启用或关闭Windows功能(左上角)</p>
+<blockquote>
+<p>适用于Linux的Windows子系统 &gt; 重启</p>
+</blockquote>
+<h2 id="2-Ubuntu18-04LTS安装-2020年建议先用这个"><a href="#2-Ubuntu18-04LTS安装-2020年建议先用这个" class="headerlink" title="2.Ubuntu18.04LTS安装(2020年建议先用这个)"></a>2.Ubuntu18.04LTS安装(2020年建议先用这个)</h2><p>搜索（开始菜单旁边那个），输入store &gt; microsoft store &gt; 搜索ubuntu &gt; 安装18.04LTS</p>
+<h2 id="3-Ubuntu换源"><a href="#3-Ubuntu换源" class="headerlink" title="3.Ubuntu换源"></a>3.Ubuntu换源</h2><ul>
+<li>启动ubuntu<br>直接在开始菜单点图标，第一次打开要创建账号和密码<h3 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h3><ul>
+<li>记得拿小本子记好密码，不要乱输入忘了，短一点就好，不要有特殊符号不要数字开头</li>
+<li>linux下密码输入没有占位符提醒</li>
+</ul>
+</li>
+</ul>
+<h3 id="linux-command"><a href="#linux-command" class="headerlink" title="linux command:"></a>linux command:</h3><pre><code>- `ls` 查看当前目录下有什么鬼东西
+- `cd /mnt` goto my computer
+- `cd d` goto driver D
+- `cd ..` 返回上一级
+- `cd FOLDER_NAME` 移动到指定的文件夹
+- `dotnet new console` 在当前目录下创建一个.netcore控制台，项目名称与目录名称相同
+- `dotnet run` 运行.netcore程序，当前目录必须要有.netcore项目，并且有PROJECT_NAME.csproject文件
+- `clear` 清屏
+- `sudo apt-get install XX` 安装XX软件</code></pre><h3 id="换源文件"><a href="#换源文件" class="headerlink" title="换源文件"></a>换源文件</h3><ul>
+<li>移动当前目录 cd /etc/apt/</li>
+<li>备份源文件 sudo cp sources.list sources.list.bak</li>
+<li>修改源文件 sudo vim sources.list</li>
+<li>按两下g让光标到开头</li>
+<li>按d, 然后shift+g删除所有内容</li>
+<li>复制以下源<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></li>
+<li>按i进入插入模式（左下角显示INSERT），右键粘贴</li>
+<li>ESC退出插入模式</li>
+<li>:wq退出</li>
+<li>确认文件已更新 cat sources.list</li>
+</ul>
+<h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><ul>
+<li>sudo apt-get update</li>
+<li>sudo apt-get upgrade</li>
+</ul>
+<h3 id="安装VS-Code"><a href="#安装VS-Code" class="headerlink" title="安装VS Code"></a>安装VS Code</h3><ul>
+<li>输入code没有安装会自动安装</li>
+<li>安装好后再输入变成启动 </li>
+</ul>
+]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>WSL</tag>
+        <tag>VS Code</tag>
       </tags>
   </entry>
   <entry>
@@ -177,166 +337,5 @@
         <tag>json</tag>
         <tag>MVVM</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>C#/Udp-6.在linux中运行.netcore版的接收器</title>
-    <url>/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  踩坑，填坑，在VS中创建跨平台的.netcore的UdpReceiver控制台实例，running in linux</p>
-<h3 id="注意（Caution-大写加粗）"><a href="#注意（Caution-大写加粗）" class="headerlink" title="注意（Caution, 大写加粗）"></a>注意（Caution, 大写加粗）</h3><p>由于引用的Newtonsoft.Json在VS Code使用Nuget添加引用会造成大坑（这就是我一直抵触SB无脑Nuget的原因, 倡导使用简单的库，而不是牛逼但是复杂，出了天坑都不会填），但是在VisualStudio中使用没有问题（所以怪我不会正确引用？）</p>
-<ul>
-<li>BUG in VS Code when using nuget to add reference<blockquote>
-<p>‘Newtonsoft.Json’ already has a dependency defined for ‘Microsoft.CSharp’    </p>
-</blockquote>
-</li>
-</ul>
-<p>更糟糕的是，我看了官方的issues，人家说这个不是bug，而且由于这个牛逼的库包含在了.NetCore 3.0 的Microsoft.Sharp中，所以可能只要你在自己的库中依赖过之后，再引用自己的库中都会完蛋。</p>
-<hr>
-<div class="mdui-video-container">
-<iframe src="//player.bilibili.com/player.html?bvid=BV1qp4y1D7av&cid=201853226&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-</div>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
-<h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
-<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
-<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
-</ul>
-<h3 id="3-项目依赖（Dependency）"><a href="#3-项目依赖（Dependency）" class="headerlink" title="3.项目依赖（Dependency）"></a>3.项目依赖（Dependency）</h3><ul>
-<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
-<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
-<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
-<li><strong>Newtonsoft.Json</strong></li>
-</ul>
-<h3 id="4-项目地址-Source-code"><a href="#4-项目地址-Source-code" class="headerlink" title="4.项目地址(Source code)"></a>4.项目地址(Source code)<br></h3><ul>
-<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
-</ul>
-<h3 id="5-发行版获取（Realse）"><a href="#5-发行版获取（Realse）" class="headerlink" title="5.发行版获取（Realse）"></a>5.发行版获取（Realse）</h3><ul>
-<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
-</ul>
-<hr>
-<h2 id="解决方案（Solution）"><a href="#解决方案（Solution）" class="headerlink" title="解决方案（Solution）"></a>解决方案（Solution）</h2><h3 id="1-在VS中创建跨平台应用-Creat-a-netcore-console-in-VS"><a href="#1-在VS中创建跨平台应用-Creat-a-netcore-console-in-VS" class="headerlink" title="1.在VS中创建跨平台应用(Creat a .netcore console in VS)"></a>1.在VS中创建跨平台应用(Creat a .netcore console in VS)</h3><ul>
-<li>添加 &gt; 新建项目 &gt; .netcore &gt; console</li>
-<li>添加引用, nuget search and install <strong>LoongEgg.UdpCore</strong></li>
-</ul>
-<p><strong>坑爹提醒(Caution, super buggy)</strong></p>
-<ul>
-<li>在linux的.netcore sdk 3.0 <strong>DO NOT SUPPORT</strong>.netcore 2.0 app, 所以只能使用VS2019创建.netcore3.0的console<br>是不是开发python划时代的2.0-&gt;3.0的那波人跑去开发C#了，各种割裂</li>
-<li>在VS2019中引用的包的依赖，无法在Nuget中更新</li>
-<li>VS2019创建的项目，在linux中<code>dotnet run</code>后，VS中会出错，只能重生成<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpReceiver.Net45</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> LoongEgg.UdpCore.UdpReceiver(<span class="number">2233</span>);</span><br><span class="line">            receiver.ReaderAsync().Wait();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"Good bye~"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>生成项目(build)</li>
-</ul>
-<h3 id="2-在linux中运行（running-in-linux）"><a href="#2-在linux中运行（running-in-linux）" class="headerlink" title="2.在linux中运行（running in linux）"></a>2.在linux中运行（running in linux）</h3><blockquote>
-<p>使用Windows 10中的WSL安装的<strong>Ubuntu18.04LTS</strong>为例，很多新东西都是坑，能不作就不要作</p>
-</blockquote>
-<h4 id="WSL-Ubuntun-command-tips"><a href="#WSL-Ubuntun-command-tips" class="headerlink" title="WSL Ubuntun command tips:"></a>WSL Ubuntun command tips:</h4><ul>
-<li><code>ls</code> 查看当前目录下有什么鬼东西</li>
-<li><code>cd /mnt</code> goto my computer</li>
-<li><code>cd d</code> goto driver D</li>
-<li><code>cd ..</code> 返回上一级</li>
-<li><code>cd FOLDER_NAME</code> 移动到指定的文件夹</li>
-<li><code>dotnet new console</code> 在当前目录下创建一个.netcore控制台，项目名称与目录名称相同</li>
-<li><code>dotnet run</code> 运行.netcore程序，当前目录必须要有.netcore项目，并且有PROJECT_NAME.csproject文件</li>
-<li><code>clear</code> 清屏<h4 id="Move-to-YOU-SOLUTION-FOLDER-in-wsl"><a href="#Move-to-YOU-SOLUTION-FOLDER-in-wsl" class="headerlink" title="Move to YOU_SOLUTION_FOLDER in wsl"></a>Move to YOU_SOLUTION_FOLDER in wsl</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">king@DESKTOP-N1M9MC7:~$ <span class="built_in">cd</span> /mnt/e</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e$ <span class="built_in">cd</span> linux/UdpReceiver.NetCoreLinux/</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e/linux/UdpReceiver.NetCoreLinux$ ls</span><br><span class="line">Program.cs  UdpReceiver.NetCoreLinux.csproj  bin  obj</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e/linux/UdpReceiver.NetCoreLinux$ dotnet run</span><br><span class="line">FXXK M$!</span><br><span class="line">06/14/2020 10:40:33 [ Info ] -&gt; E:\Published\LoongEgg.UdpCore\LoongEgg.UdpCore\UdpReceiver.cs &gt; .ctor() &gt; <span class="keyword">in</span> line[ 41]: Listening to Port=2233, GroupAddress=</span><br><span class="line">06/14/2020 10:40:33 [ Dbug ] -&gt; E:\Published\LoongEgg.UdpCore\LoongEgg.UdpCore\UdpReceiver.cs &gt; ReaderAsync() &gt; <span class="keyword">in</span> line[ 61]: Listening...</span><br></pre></td></tr></table></figure>
-<h2 id="坑爹提醒（Caution-super-buggy"><a href="#坑爹提醒（Caution-super-buggy" class="headerlink" title="坑爹提醒（Caution, super buggy)"></a>坑爹提醒（Caution, super buggy)</h2>重启VS，重开.sln不然满屏错误（reopen .sln）</li>
-</ul>
-]]></content>
-      <categories>
-        <category>C#/UDP</category>
-      </categories>
-      <tags>
-        <tag>C#</tag>
-        <tag>.netcore</tag>
-        <tag>linux</tag>
-        <tag>cross platform</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Windows中安装Linux子系统和VSCode</title>
-    <url>/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/</url>
-    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
-<li>特点<br>基于WSL安装，不需要虚拟机，不需要双系统</li>
-<li>步骤<br>WSL功能启用, Ubuntu系统安装，换源，VS Code安装</li>
-</ul>
-<hr>
-<h2 id="1-WSL功能启用"><a href="#1-WSL功能启用" class="headerlink" title="1.WSL功能启用"></a>1.WSL功能启用</h2><p>开始菜单 &gt; 设置 &gt; 应用 &gt; 程序和功能(右上角) &gt; 启用或关闭Windows功能(左上角)</p>
-<blockquote>
-<p>适用于Linux的Windows子系统 &gt; 重启</p>
-</blockquote>
-<h2 id="2-Ubuntu18-04LTS安装-2020年建议先用这个"><a href="#2-Ubuntu18-04LTS安装-2020年建议先用这个" class="headerlink" title="2.Ubuntu18.04LTS安装(2020年建议先用这个)"></a>2.Ubuntu18.04LTS安装(2020年建议先用这个)</h2><p>搜索（开始菜单旁边那个），输入store &gt; microsoft store &gt; 搜索ubuntu &gt; 安装18.04LTS</p>
-<h2 id="3-Ubuntu换源"><a href="#3-Ubuntu换源" class="headerlink" title="3.Ubuntu换源"></a>3.Ubuntu换源</h2><ul>
-<li>启动ubuntu<br>直接在开始菜单点图标，第一次打开要创建账号和密码<h3 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h3><ul>
-<li>记得拿小本子记好密码，不要乱输入忘了，短一点就好，不要有特殊符号不要数字开头</li>
-<li>linux下密码输入没有占位符提醒</li>
-</ul>
-</li>
-</ul>
-<h3 id="linux-command"><a href="#linux-command" class="headerlink" title="linux command:"></a>linux command:</h3><pre><code>- `s` 查看当前目录下有什么鬼东西
-- `cd /mnt` goto my computer
-- `cd d` goto driver D
-- `cd ..` 返回上一级
-- `cd FOLDER_NAME` 移动到指定的文件夹
-- `dotnet new console` 在当前目录下创建一个.netcore控制台，项目名称与目录名称相同
-- `dotnet run` 运行.netcore程序，当前目录必须要有.netcore项目，并且有PROJECT_NAME.csproject文件
-- `clear` 清屏
-- `sudo apt-get install XX` 安装XX软件</code></pre><h3 id="换源文件"><a href="#换源文件" class="headerlink" title="换源文件"></a>换源文件</h3><ul>
-<li>移动当前目录 cd /etc/apt/</li>
-<li>备份源文件 sudo cp sources.list sources.list.bak</li>
-<li>修改源文件 sudo vim sources.list</li>
-<li>按两下g让光标到开头</li>
-<li>按d, 然后shift+g删除所有内容</li>
-<li>复制以下源<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></li>
-<li>按i进入插入模式（左下角显示INSERT），右键粘贴</li>
-<li>ESC退出插入模式</li>
-<li>:wq退出</li>
-<li>确认文件已更新 cat sources.list</li>
-</ul>
-<h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><ul>
-<li>sudo apt-get update</li>
-<li>sudo apt-get upgrade</li>
-</ul>
-<h3 id="安装VS-Code"><a href="#安装VS-Code" class="headerlink" title="安装VS Code"></a>安装VS Code</h3><ul>
-<li>输入code没有安装会自动安装</li>
-<li>安装好后再输入变成启动 </li>
-</ul>
-]]></content>
-      <tags>
-        <tag>linux</tag>
-        <tag>WSL</tag>
-        <tag>VS Code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Windows中使用VSCode远程开发ubuntu中的.netcore项目</title>
-    <url>/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
-<li>特点<br>文件在windows中方便管理，开发环境在linux调试效果真实</li>
-<li>步骤<br>WSL功能启用, Ubuntu系统安装，换源，VS Code安装</li>
-<li>注意<br>本文章写于2020年，基于WSL中的ubuntu18.04LTS, 目标为.netcore 3.1 sdk<br>可能缺少一些插件比如C#在VS Code插件中安装，有些插件会自动提示安装，要记得点yes比如VS code的WSL插件</li>
-</ul>
-<hr>
-<h2 id="1-dotnetcore-sdk-安装"><a href="#1-dotnetcore-sdk-安装" class="headerlink" title="1.dotnetcore sdk 安装"></a>1.dotnetcore sdk 安装</h2><ul>
-<li>官网信息<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu</a><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update; \</span><br><span class="line">sudo apt-get install -y apt-transport-https &amp;&amp; \</span><br><span class="line">sudo apt-get update &amp;&amp; \</span><br><span class="line">sudo apt-get install -y dotnet-sdk-3.1</span><br></pre></td></tr></table></figure>
-<ul>
-<li>检查安装情况 dotnet -v<h2 id="2-创建-netcore-console"><a href="#2-创建-netcore-console" class="headerlink" title="2.创建.netcore console"></a>2.创建.netcore console</h2></li>
-<li>在Windows中某一盘下面，比如我在e:\linux\netcoretest\创建了一个文件夹</li>
-<li>在linux下移动进去 cd /mnt/e/linux/netcoretest</li>
-<li>在linux下创建项目 dotnet new console</li>
-<li>在linux下运行项目 dotnet run 会显示：<blockquote>
-<p>Hello World!</p>
-</blockquote>
-</li>
-<li>在windows下打开文件夹<ul>
-<li>更改Hello World!为Hello loongegg.github.io!并保存</li>
-</ul>
-</li>
-<li>在linux下运行项目输出  dotnet run  会显示：<blockquote>
-<p>Hello loongegg.github.io!</p>
-</blockquote>
-</li>
-</ul>
-]]></content>
   </entry>
 </search>
