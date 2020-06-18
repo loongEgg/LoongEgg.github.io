@@ -49,7 +49,7 @@
     
     <title>
         
-            在Windows中使用VSCode远程开发ubuntu中的.netcore项目 | Loong Egg
+            WPF/Xaml技巧-1.TypeConverter实现自定义范围 | Loong Egg
         
     </title>
     
@@ -199,11 +199,11 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/">在Windows中使用VSCode远程开发ubuntu中的.netcore项目</a>
+  <a class="post-header-title" href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">WPF/Xaml技巧-1.TypeConverter实现自定义范围</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-14
+      发布于:&nbsp;2020-06-18
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
@@ -211,7 +211,7 @@
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
+      分类于:&nbsp;<a class="category-link" href="/categories/WPF-Xaml/">WPF/Xaml</a>
     </span>
     
       <span>
@@ -233,25 +233,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=在Windows中使用VSCode远程开发ubuntu中的.netcore项目&url=https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/&pic=https://LoongEgg.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=WPF/Xaml技巧-1.TypeConverter实现自定义范围&url=https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/&pic=https://LoongEgg.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=在Windows中使用VSCode远程开发ubuntu中的.netcore项目&url=https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/&via=Loong Egg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=WPF/Xaml技巧-1.TypeConverter实现自定义范围&url=https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/&via=Loong Egg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/&title=在Windows中使用VSCode远程开发ubuntu中的.netcore项目" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/&title=WPF/Xaml技巧-1.TypeConverter实现自定义范围" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg&title=在Windows中使用VSCode远程开发ubuntu中的.netcore项目&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg&title=WPF/Xaml技巧-1.TypeConverter实现自定义范围&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/&text=在Windows中使用VSCode远程开发ubuntu中的.netcore项目" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/&text=WPF/Xaml技巧-1.TypeConverter实现自定义范围" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -264,51 +264,20 @@
   <div class="post-tags">
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/netcore/ >netcore</a>
+        <a rel="tag" href = /tags/WPF/ >WPF</a>
       </i>
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/VSCode/ >VSCode</a>
+        <a rel="tag" href = /tags/Xaml/ >Xaml</a>
       </i>
     
   </div>
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <div class="mdui-video-container">
-<iframe src="//player.bilibili.com/player.html?aid=668616999&bvid=BV1Ba4y1Y7g9&cid=201927797&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> 
-</div>
+    <h2 id="Range-cs"><a href="#Range-cs" class="headerlink" title="Range.cs"></a>Range.cs</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">TypeConverter(typeof(RangeConverter))</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Range</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> From &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> To &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> Max =&gt; Math.Max(From, To);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> Min =&gt; Math.Min(From, To);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> Distance =&gt; Math.Abs(Max - Min);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
-<li>特点<br>文件在windows中方便管理，开发环境在linux调试效果真实</li>
-<li>注意<br>本文章写于2020年，基于WSL中的ubuntu18.04LTS, 目标为.netcore 3.1 sdk<br>可能缺少一些插件比如C#在VS Code插件中安装，有些插件会自动提示安装，要记得点yes比如VS code的WSL插件</li>
-</ul>
-<hr>
-<h2 id="1-dotnetcore-sdk-安装"><a href="#1-dotnetcore-sdk-安装" class="headerlink" title="1.dotnetcore sdk 安装"></a>1.dotnetcore sdk 安装</h2><ul>
-<li>官网信息<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu</a></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update; \</span><br><span class="line">sudo apt-get install -y apt-transport-https &amp;&amp; \</span><br><span class="line">sudo apt-get update &amp;&amp; \</span><br><span class="line">sudo apt-get install -y dotnet-sdk-3.1</span><br></pre></td></tr></table></figure>
-<ul>
-<li>检查安装情况 dotnet -v<h2 id="2-创建-netcore-console"><a href="#2-创建-netcore-console" class="headerlink" title="2.创建.netcore console"></a>2.创建.netcore console</h2></li>
-<li>在Windows中某一盘下面，比如我在e:\linux\netcoretest\创建了一个文件夹</li>
-<li>在linux下移动进去 cd /mnt/e/linux/netcoretest</li>
-<li>在linux下创建项目 dotnet new console</li>
-<li>在linux下运行项目 dotnet run 会显示：<blockquote>
-<p>Hello World!</p>
-</blockquote>
-</li>
-<li>在windows下打开文件夹<ul>
-<li>更改Hello World!为Hello loongegg.github.io!并保存</li>
-</ul>
-</li>
-<li>在linux下运行项目输出  dotnet run  会显示：<blockquote>
-<p>Hello loongegg.github.io!</p>
-</blockquote>
-</li>
-</ul>
-<p>~</p>
+<h2 id="RangeConverter"><a href="#RangeConverter" class="headerlink" title="RangeConverter"></a>RangeConverter</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">RangeConverter</span> : <span class="title">TypeConverter</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">bool</span> <span class="title">CanConvertFrom</span>(<span class="params">ITypeDescriptorContext context, Type sourceType</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (sourceType == <span class="keyword">typeof</span>(<span class="keyword">string</span>))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">base</span>.CanConvertFrom(context, sourceType);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">object</span> <span class="title">ConvertFrom</span>(<span class="params">ITypeDescriptorContext context, CultureInfo culture, <span class="keyword">object</span> <span class="keyword">value</span></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">var</span> strs = <span class="keyword">value</span>.ToString().SplitAndRemoveSpace(<span class="string">','</span>);</span><br><span class="line">        <span class="keyword">if</span> (strs.Any())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">var</span> s <span class="keyword">in</span> strs)</span><br><span class="line">            &#123;</span><br><span class="line">                Debug.WriteLine(s);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> d0;</span><br><span class="line">        <span class="keyword">double</span> d1;</span><br><span class="line">        <span class="keyword">if</span> (strs.Length == <span class="number">2</span></span><br><span class="line">            &amp;&amp; <span class="keyword">double</span>.TryParse(strs[<span class="number">0</span>], <span class="keyword">out</span> d0)</span><br><span class="line">            &amp;&amp; <span class="keyword">double</span>.TryParse(strs[<span class="number">1</span>], <span class="keyword">out</span> d1))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Range &#123; From = d0, To = d1 &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">base</span>.ConvertFrom(context, culture, <span class="keyword">value</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </div>
   <!--文末结束语-->
@@ -321,14 +290,14 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">
         <i class="iconfont icon-angle-left"></i>
-        <span>WPF/Xaml技巧-1.TypeConverter实现自定义范围</span>
+        <span>C#/类型变换-1.去空格并以指定字符分割字符串</span>
       </a>
     
     
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/">
-        <span>在Windows中安装Linux子系统和VSCode</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/">
+        <span>在Windows中使用VSCode远程开发ubuntu中的.netcore项目</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -342,8 +311,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-dotnetcore-sdk-安装"><span class="toc-number">2.</span> <span class="toc-text">1.dotnetcore sdk 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-创建-netcore-console"><span class="toc-number">3.</span> <span class="toc-text">2.创建.netcore console</span></a></li></ol>
+        <a href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Range-cs"><span class="toc-number">1.</span> <span class="toc-text">Range.cs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RangeConverter"><span class="toc-number">2.</span> <span class="toc-text">RangeConverter</span></a></li></ol>
       </li>
     </ul>
   </div>
