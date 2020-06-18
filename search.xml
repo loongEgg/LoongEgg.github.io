@@ -6,6 +6,12 @@
     <content><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="基本UDP收发通信基础库的实现"><a href="#基本UDP收发通信基础库的实现" class="headerlink" title="基本UDP收发通信基础库的实现"></a>基本UDP收发通信基础库的实现</h2><div class="mdui-video-container">
 <iframe src="//player.bilibili.com/player.html?aid=286020112&bvid=BV1Yf4y1y7Ca&cid=202720541&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
+<div class="mdui-video-container">
+<iframe src="//player.bilibili.com/player.html?aid=456001401&bvid=BV1s5411W78Z&cid=203299869&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+<div class="mdui-video-container">
+<iframe src="//player.bilibili.com/player.html?aid=541118085&bvid=BV1si4y1G7w4&cid=203314215&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
 <h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
