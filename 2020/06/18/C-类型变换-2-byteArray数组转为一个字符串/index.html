@@ -49,7 +49,7 @@
     
     <title>
         
-            C#/类型变换-1.去空格并以指定字符分割字符串 | Loong Egg
+            C#/类型变换-2.byteArray数组转为一个字符串 | Loong Egg
         
     </title>
     
@@ -199,7 +199,7 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-1.去空格并以指定字符分割字符串</a>
+  <a class="post-header-title" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-2.byteArray数组转为一个字符串</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
@@ -233,25 +233,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=C#/类型变换-1.去空格并以指定字符分割字符串&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/&pic=https://LoongEgg.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=C#/类型变换-2.byteArray数组转为一个字符串&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/&pic=https://LoongEgg.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=C#/类型变换-1.去空格并以指定字符分割字符串&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/&via=Loong Egg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=C#/类型变换-2.byteArray数组转为一个字符串&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/&via=Loong Egg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/&title=C#/类型变换-1.去空格并以指定字符分割字符串" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/&title=C#/类型变换-2.byteArray数组转为一个字符串" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg&title=C#/类型变换-1.去空格并以指定字符分割字符串&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Loong Egg&title=C#/类型变换-2.byteArray数组转为一个字符串&summary=一个强大的蓝人&pics=https://LoongEgg.github.io/null&url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/&text=C#/类型变换-1.去空格并以指定字符分割字符串" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/&text=C#/类型变换-2.byteArray数组转为一个字符串" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -264,18 +264,18 @@
   <div class="post-tags">
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/ >C#扩展属性</a>
+        <a rel="tag" href = /tags/string/ >string</a>
       </i>
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/string/ >string</a>
+        <a rel="tag" href = /tags/linq/ >linq</a>
       </i>
     
   </div>
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h2 id="StringExtensions-cs"><a href="#StringExtensions-cs" class="headerlink" title="StringExtensions.cs"></a>StringExtensions.cs</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">StringExtensions</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 以扩展属性的形式分割字符串为字符串数组</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;example&gt;</span><span class="doctag">&lt;code&gt;</span>YourString.SplitAndRemoveSpace(',', '\t');<span class="doctag">&lt;/code&gt;</span><span class="doctag">&lt;/example&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="self"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="seprator"&gt;</span>用来分割的字符们<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">string</span>[] <span class="title">SplitAndRemoveSpace</span>(<span class="params"><span class="keyword">this</span> <span class="keyword">string</span> self, <span class="keyword">params</span> <span class="keyword">char</span>[] seprator</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">string</span> spaceRemoved = self.Replace(<span class="string">" "</span>, <span class="keyword">string</span>.Empty);</span><br><span class="line">        <span class="keyword">string</span>[] splited = spaceRemoved.Split(seprator, StringSplitOptions.RemoveEmptyEntries);</span><br><span class="line">        <span class="keyword">return</span> splited;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <h2 id="一行大法"><a href="#一行大法" class="headerlink" title="一行大法"></a>一行大法</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Lesson.UdpCore.Receiver</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> UdpReceiver();</span><br><span class="line">            receiver.MessageReceived += Receiver_MessageReceived;</span><br><span class="line">            receiver.ReceiveAsync().Wait();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Receiver_MessageReceived</span>(<span class="params"><span class="keyword">object</span> sender, UdpReceivedEventArgs args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">byte</span>[] buff = args.Buffer;</span><br><span class="line">            <span class="comment">// 一行将byte[]转为字符串</span></span><br><span class="line">            <span class="keyword">string</span> rec = String.Join(<span class="string">","</span>, buff.Select(b =&gt; b.ToString()).ToArray());</span><br><span class="line">            Console.WriteLine(rec);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
   <!--文末结束语-->
   
@@ -287,14 +287,9 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>C#/类型变换-2.byteArray数组转为一个字符串</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">
-        <span>WPF/Xaml技巧-1.TypeConverter实现自定义范围</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+        <span>C#/类型变换-1.去空格并以指定字符分割字符串</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -308,8 +303,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#StringExtensions-cs"><span class="toc-number">1.</span> <span class="toc-text">StringExtensions.cs</span></a></li></ol>
+        <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一行大法"><span class="toc-number">1.</span> <span class="toc-text">一行大法</span></a></li></ol>
       </li>
     </ul>
   </div>

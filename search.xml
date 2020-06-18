@@ -393,4 +393,16 @@
         <tag>string</tag>
       </tags>
   </entry>
+  <entry>
+    <title>C#/类型变换-2.byteArray数组转为一个字符串</title>
+    <url>/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<h2 id="一行大法"><a href="#一行大法" class="headerlink" title="一行大法"></a>一行大法</h2><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Lesson.UdpCore.Receiver</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> UdpReceiver();</span><br><span class="line">            receiver.MessageReceived += Receiver_MessageReceived;</span><br><span class="line">            receiver.ReceiveAsync().Wait();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Receiver_MessageReceived</span>(<span class="params"><span class="keyword">object</span> sender, UdpReceivedEventArgs args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">byte</span>[] buff = args.Buffer;</span><br><span class="line">            <span class="comment">// 一行将byte[]转为字符串</span></span><br><span class="line">            <span class="keyword">string</span> rec = String.Join(<span class="string">","</span>, buff.Select(b =&gt; b.ToString()).ToArray());</span><br><span class="line">            Console.WriteLine(rec);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>C#类型变换&amp;扩展属性</category>
+      </categories>
+      <tags>
+        <tag>string</tag>
+        <tag>linq</tag>
+      </tags>
+  </entry>
 </search>
