@@ -1,883 +1,826 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
-    
-    
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
-    
-    
-    
-        <link rel="shortcut icon" href="/icons/favicon.ico">
-    
-    
-    
-<link rel="stylesheet" href="/css/mdui.min.css">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/iconfont.css">
-
-    
-    
-
-    
-        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-          
-
-
-    
-    
-    <title>
-          
-            Loong Egg
-        
-    </title>
-    
-    
-<meta name="generator" content="Hexo 4.2.1"></head>
-<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  <meta charset="utf-8">
   
-  <header class="mdui-appbar mdui-appbar-fixed">
-  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
-    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
-    <a href="/" class="mdui-typo-headline">Loong Egg</a>
-    <a href="/" class="header-subtitle mdui-typo-headline"></a>
-    <div class="mdui-toolbar-spacer"></div>
-    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+
+  
+  <title>Loong Egg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一个强大的蓝人">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loong Egg">
+<meta property="og:url" content="https://loongegg.github.io/index.html">
+<meta property="og:site_name" content="Loong Egg">
+<meta property="og:description" content="一个强大的蓝人">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Loong Egg">
+<meta property="article:tag" content="WPF&#x2F;C#">
+<meta property="article:tag" content=" .NetCore">
+<meta property="article:tag" content=" Inkscape">
+<meta property="article:tag" content=" Fontforge">
+<meta property="article:tag" content=" olive">
+<meta property="article:tag" content=" blender">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Loong Egg" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Loong Egg</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://LoongEgg.github.io"></form>
+      </div>
+    </div>
   </div>
 </header>
-
-<div class="mdui-dialog" id="search">
+      <div class="outer">
+        <section id="main">
   
-    <div class="search-form">
-      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
-    </div>
-    <div class="search-result" data-resource="/search.xml"></div>
+    <article id="post-WPF-Xaml技巧-2-给自定义frameworkelement加上文字FormattedText" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/" class="article-date">
+  <time datetime="2020-06-19T05:02:44.000Z" itemprop="datePublished">2020-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/WPF-Xaml/">WPF/Xaml</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-</div>
-
-  <aside id="sidebar" class="mdui-drawer">
-    <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
-    </div>
-
-    
-    <div id="sidebar-tab1" class="mdui-p-a-2">
-        <div class="mdui-list">
-            
-                
-                <a href="/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-home"></i>
-                    </div>
-                    <div class="mdui-list-item-content">主页</div>
-                </a>
-            
-                
-                <a href="/tags/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-bookmark"></i>
-                    </div>
-                    <div class="mdui-list-item-content">标签</div>
-                </a>
-            
-                
-                <a href="/categories/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-folder"></i>
-                    </div>
-                    <div class="mdui-list-item-content">分类</div>
-                </a>
-            
-                
-                <a href="/archives/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-archive"></i>
-                    </div>
-                    <div class="mdui-list-item-content">归档</div>
-                </a>
-            
-                
-                <a href="/about/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-user"></i>
-                    </div>
-                    <div class="mdui-list-item-content">关于</div>
-                </a>
-            
-            <div class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-icon">
-                    <i class="iconfont icon-moon"></i>
-                </div>
-                <div class="mdui-list-item-content">夜间模式</div>
-                <label class="mdui-switch" id="darkmode">
-                  <input type="checkbox" id="nightmode_switch"/>
-                  <i class="mdui-switch-icon"></i>
-                </label>
-            </div>           
-        </div>
-    </div>
-
-    
-    <div id="sidebar-tab2" class="mdui-p-a-2">
-        <div class="sidebar-overview">
-            <div class="sidebar-avatar">
-                
-                    <img src="/icons/avatar.gif"/>
-                
-            </div>
-            <div class="sidebar-author-name">Loong Egg</div>
-            <div class="sidebar-description">一个强大的蓝人</div>
-        </div>
-        <div class="sidebar-links">
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
-                    <a href="mailto:loongegg@163.com" class="mdui-chip-title">E-Mail</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a href="https://github.com/loongEgg" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
-                </div>
-            
-        </div>
-        <ul class="mdui-list" mdui-collapse="{accordion: true}">
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-link"></i>
-                    </div>
-                    <div class="mdui-list-item-content">友情链接</div>
-                    <div class="mdui-collapse-item-arrow">
-                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
-                    </div>
-                </div>
-                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                    
-                        <a href="https://garybear.cn/hexo-theme-meadow/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
-                            Meadow说明文档
-                        </a>
-                    
-                </ul>
-            </li>
-        </ul>
-
-    </div>
-
-    <div class="mdui-divider"></div>
-    
-    
-</aside>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/">WPF/Xaml技巧-2.给自定义frameworkelement加上文字FormattedText</a>
+    </h1>
   
-  <main id="main-contain" class="mdui-container mdui-m-t-5">
+
+      </header>
     
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.ComponentModel;</span><br><span class="line"><span class="keyword">using</span> System.Globalization;</span><br><span class="line"><span class="keyword">using</span> System.Windows;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Media;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> | 个人微信：InnerGeeker</span></span><br><span class="line"><span class="comment"> | 联系邮箱：LoongEgg@163.com </span></span><br><span class="line"><span class="comment"> | 创建时间：2020/6/19 12:45:32</span></span><br><span class="line"><span class="comment"> | 主要用途：</span></span><br><span class="line"><span class="comment"> | 更改记录：</span></span><br><span class="line"><span class="comment"> | 时间	       版本        更改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">WpfControlDevelopment.Demo</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SingleDigitSlider</span> : <span class="title">FrameworkElement</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 当前读数</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        [<span class="meta">Category(<span class="meta-string">"Loong Egg"</span>)</span>]</span><br><span class="line">        [<span class="meta">Description(<span class="meta-string">"当前读数"</span>)</span>]</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Readout</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> (<span class="keyword">double</span>)GetValue(ReadoutProperty); &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetValue(ReadoutProperty, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;see cref="Readout"/&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> DependencyProperty ReadoutProperty = DependencyProperty.Register</span><br><span class="line">            (<span class="keyword">nameof</span>(Readout), <span class="keyword">typeof</span>(<span class="keyword">double</span>), <span class="keyword">typeof</span>(SingleDigitSlider), <span class="keyword">new</span> PropertyMetadata(<span class="keyword">default</span>(<span class="keyword">double</span>)));</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnRender</span>(<span class="params">DrawingContext drawingContext</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">string</span> testString = <span class="string">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor"</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Create the initial formatted text string.</span></span><br><span class="line">            FormattedText formattedText = <span class="keyword">new</span> FormattedText(</span><br><span class="line">                testString,</span><br><span class="line">                CultureInfo.GetCultureInfo(<span class="string">"en-us"</span>),</span><br><span class="line">                FlowDirection.LeftToRight,</span><br><span class="line">                <span class="keyword">new</span> Typeface(<span class="string">"Verdana"</span>),</span><br><span class="line">                <span class="number">32</span>,</span><br><span class="line">                Brushes.Black);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Set a maximum width and height. If the text overflows these values, an ellipsis "..." appears.</span></span><br><span class="line">            formattedText.MaxTextWidth = <span class="number">300</span>;</span><br><span class="line">            formattedText.MaxTextHeight = <span class="number">240</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Use a larger font size beginning at the first (zero-based) character and continuing for 5 characters.</span></span><br><span class="line">            <span class="comment">// The font size is calculated in terms of points -- not as device-independent pixels.</span></span><br><span class="line">            formattedText.SetFontSize(<span class="number">36</span> * (<span class="number">96.0</span> / <span class="number">72.0</span>), <span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Use a Bold font weight beginning at the 6th character and continuing for 11 characters.</span></span><br><span class="line">            formattedText.SetFontWeight(FontWeights.Bold, <span class="number">6</span>, <span class="number">11</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Use a linear gradient brush beginning at the 6th character and continuing for 11 characters.</span></span><br><span class="line">            formattedText.SetForegroundBrush(</span><br><span class="line">                                    <span class="keyword">new</span> LinearGradientBrush(</span><br><span class="line">                                    Colors.Orange,</span><br><span class="line">                                    Colors.Teal,</span><br><span class="line">                                    <span class="number">90.0</span>),</span><br><span class="line">                                    <span class="number">6</span>, <span class="number">11</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Use an Italic font style beginning at the 28th character and continuing for 28 characters.</span></span><br><span class="line">            formattedText.SetFontStyle(FontStyles.Italic, <span class="number">28</span>, <span class="number">28</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Draw the formatted text string to the DrawingContext of the control.</span></span><br><span class="line">            drawingContext.DrawText(formattedText, <span class="keyword">new</span> Point(<span class="number">10</span>, <span class="number">0</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/" data-id="ckbm9dnsj000nm0uebeaa79ga" class="article-share-link">Share</a>
       
       
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/">WPF/Xaml技巧-2.给自定义frameworkelement加上文字FormattedText</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-19
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-19
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/WPF-Xaml/">WPF/Xaml</a>
-    </span>
-    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/" rel="tag">WPF</a></li></ul>
+
+    </footer>
   </div>
-</div>   
-    
+  
+</article>
 
 
-
-      
-      
-  <div class="post-tags">
+  
+    <article id="post-C-类型变换-2-byteArray数组转为一个字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time datetime="2020-06-18T11:51:49.000Z" itemprop="datePublished">2020-06-18</time>
+</a>
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/WPF/ >WPF</a>
-      </i>
-    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/">C#类型变换&扩展属性</a>
   </div>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="lin...
-          
-          </div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-2.byteArray数组转为一个字符串</a>
+    </h1>
+  
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-2.byteArray数组转为一个字符串</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-18
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-19
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/">C#类型变换&扩展属性</a>
-    </span>
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一行大法"><a href="#一行大法" class="headerlink" title="一行大法"></a>一行大法</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Lesson.UdpCore.Receiver</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> UdpReceiver();</span><br><span class="line">            receiver.MessageReceived += Receiver_MessageReceived;</span><br><span class="line">            receiver.ReceiveAsync().Wait();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Receiver_MessageReceived</span>(<span class="params"><span class="keyword">object</span> sender, UdpReceivedEventArgs args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">byte</span>[] buff = args.Buffer;</span><br><span class="line">            <span class="comment">// 一行将byte[]转为字符串</span></span><br><span class="line">            <span class="keyword">string</span> rec = String.Join(<span class="string">","</span>, buff.Select(b =&gt; b.ToString()).ToArray());</span><br><span class="line">            Console.WriteLine(rec);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="ckbm9dnsh000jm0ue2t9th74g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linq/" rel="tag">linq</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/string/" rel="tag">string</a></li></ul>
+
+    </footer>
   </div>
-</div>   
-    
+  
+</article>
 
 
-
-      
-      
-  <div class="post-tags">
+  
+    <article id="post-C-类型变换-1-去空格并以指定字符分割字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time datetime="2020-06-18T11:31:00.000Z" itemprop="datePublished">2020-06-18</time>
+</a>
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/string/ >string</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/linq/ >linq</a>
-      </i>
-    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/">C#类型变换&扩展属性</a>
   </div>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="一行大法"><a href="#一行大法" class="headerlink" title="一行大法"></a>一行大法</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><sp...
-          
-          </div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-1.去空格并以指定字符分割字符串</a>
+    </h1>
+  
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-1.去空格并以指定字符分割字符串</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-18
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-19
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/">C#类型变换&扩展属性</a>
-    </span>
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="StringExtensions-cs"><a href="#StringExtensions-cs" class="headerlink" title="StringExtensions.cs"></a>StringExtensions.cs</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">StringExtensions</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 以扩展属性的形式分割字符串为字符串数组</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;example&gt;</span><span class="doctag">&lt;code&gt;</span>YourString.SplitAndRemoveSpace(',', '\t');<span class="doctag">&lt;/code&gt;</span><span class="doctag">&lt;/example&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="self"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="seprator"&gt;</span>用来分割的字符们<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">string</span>[] <span class="title">SplitAndRemoveSpace</span>(<span class="params"><span class="keyword">this</span> <span class="keyword">string</span> self, <span class="keyword">params</span> <span class="keyword">char</span>[] seprator</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">string</span> spaceRemoved = self.Replace(<span class="string">" "</span>, <span class="keyword">string</span>.Empty);</span><br><span class="line">        <span class="keyword">string</span>[] splited = spaceRemoved.Split(seprator, StringSplitOptions.RemoveEmptyEntries);</span><br><span class="line">        <span class="keyword">return</span> splited;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="ckbm9dnsc000dm0ueg0py5qh3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/" rel="tag">C#扩展属性</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/string/" rel="tag">string</a></li></ul>
+
+    </footer>
   </div>
-</div>   
-    
+  
+</article>
 
 
-
-      
-      
-  <div class="post-tags">
+  
+    <article id="post-WPF-Xaml技巧-1-TypeConverter实现自定义范围" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/" class="article-date">
+  <time datetime="2020-06-18T11:26:54.000Z" itemprop="datePublished">2020-06-18</time>
+</a>
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/string/ >string</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/ >C#扩展属性</a>
-      </i>
-    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/WPF-Xaml/">WPF/Xaml</a>
   </div>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="StringExtensions-cs"><a href="#StringExtensions-cs" class="headerlink" title="StringExtensions.cs"></a>StringExtensions.cs</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span...
-          
-          </div>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">WPF/Xaml技巧-1.TypeConverter实现自定义范围</a>
+    </h1>
+  
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Range-cs"><a href="#Range-cs" class="headerlink" title="Range.cs"></a>Range.cs</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">TypeConverter(typeof(RangeConverter))</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Range</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> From &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> To &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> Max =&gt; Math.Max(From, To);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> Min =&gt; Math.Min(From, To);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">double</span> Distance =&gt; Math.Abs(Max - Min);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="RangeConverter"><a href="#RangeConverter" class="headerlink" title="RangeConverter"></a>RangeConverter</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">RangeConverter</span> : <span class="title">TypeConverter</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">bool</span> <span class="title">CanConvertFrom</span>(<span class="params">ITypeDescriptorContext context, Type sourceType</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (sourceType == <span class="keyword">typeof</span>(<span class="keyword">string</span>))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">base</span>.CanConvertFrom(context, sourceType);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">object</span> <span class="title">ConvertFrom</span>(<span class="params">ITypeDescriptorContext context, CultureInfo culture, <span class="keyword">object</span> <span class="keyword">value</span></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">var</span> strs = <span class="keyword">value</span>.ToString().SplitAndRemoveSpace(<span class="string">','</span>);</span><br><span class="line">        <span class="keyword">if</span> (strs.Any())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">var</span> s <span class="keyword">in</span> strs)</span><br><span class="line">            &#123;</span><br><span class="line">                Debug.WriteLine(s);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> d0;</span><br><span class="line">        <span class="keyword">double</span> d1;</span><br><span class="line">        <span class="keyword">if</span> (strs.Length == <span class="number">2</span></span><br><span class="line">            &amp;&amp; <span class="keyword">double</span>.TryParse(strs[<span class="number">0</span>], <span class="keyword">out</span> d0)</span><br><span class="line">            &amp;&amp; <span class="keyword">double</span>.TryParse(strs[<span class="number">1</span>], <span class="keyword">out</span> d1))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Range &#123; From = d0, To = d1 &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">base</span>.ConvertFrom(context, culture, <span class="keyword">value</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/" data-id="ckbm9dnsg000hm0uefegu73qs" class="article-share-link">Share</a>
       
       
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">WPF/Xaml技巧-1.TypeConverter实现自定义范围</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-18
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-19
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/WPF-Xaml/">WPF/Xaml</a>
-    </span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/" rel="tag">WPF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xaml/" rel="tag">Xaml</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-在Windows中使用VSCode远程开发ubuntu中的-netcore项目" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/" class="article-date">
+  <time datetime="2020-06-14T05:18:08.000Z" itemprop="datePublished">2020-06-14</time>
+</a>
     
   </div>
-</div>   
+  <div class="article-inner">
     
-
-
-
-      
-      
-  <div class="post-tags">
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/WPF/ >WPF</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/Xaml/ >Xaml</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="Range-cs"><a href="#Range-cs" class="headerlink" title="Range.cs"></a>Range.cs</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line"...
-          
-          </div>
+      <header class="article-header">
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/">在Windows中使用VSCode远程开发ubuntu中的.netcore项目</a>
+    </h1>
+  
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+<li>特点<br>文件在windows中方便管理，开发环境在linux调试效果真实</li>
+<li>注意<br>本文章写于2020年，基于WSL中的ubuntu18.04LTS, 目标为.netcore 3.1 sdk<br>可能缺少一些插件比如C#在VS Code插件中安装，有些插件会自动提示安装，要记得点yes比如VS code的WSL插件</li>
+</ul>
+<hr>
+<h2 id="1-dotnetcore-sdk-安装"><a href="#1-dotnetcore-sdk-安装" class="headerlink" title="1.dotnetcore sdk 安装"></a>1.dotnetcore sdk 安装</h2><ul>
+<li>官网信息<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update; \</span><br><span class="line">sudo apt-get install -y apt-transport-https &amp;&amp; \</span><br><span class="line">sudo apt-get update &amp;&amp; \</span><br><span class="line">sudo apt-get install -y dotnet-sdk-3.1</span><br></pre></td></tr></table></figure>
+<ul>
+<li>检查安装情况 dotnet -v<h2 id="2-创建-netcore-console"><a href="#2-创建-netcore-console" class="headerlink" title="2.创建.netcore console"></a>2.创建.netcore console</h2></li>
+<li>在Windows中某一盘下面，比如我在e:\linux\netcoretest\创建了一个文件夹</li>
+<li>在linux下移动进去 cd /mnt/e/linux/netcoretest</li>
+<li>在linux下创建项目 dotnet new console</li>
+<li>在linux下运行项目 dotnet run 会显示：<blockquote>
+<p>Hello World!</p>
+</blockquote>
+</li>
+<li>在windows下打开文件夹<ul>
+<li>更改Hello World!为Hello loongegg.github.io!并保存</li>
+</ul>
+</li>
+<li>在linux下运行项目输出  dotnet run  会显示：<blockquote>
+<p>Hello loongegg.github.io!</p>
+</blockquote>
+</li>
+</ul>
+<h2 id=""><a href="#" class="headerlink" title="~"></a>~</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/" data-id="ckbm9dnsl000um0ue5anwgjuc" class="article-share-link">Share</a>
       
       
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/">在Windows中使用VSCode远程开发ubuntu中的.netcore项目</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-14
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-19
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
-    </span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VSCode/" rel="tag">VSCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netcore/" rel="tag">netcore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-在Windows中安装Linux子系统和VSCode" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/" class="article-date">
+  <time datetime="2020-06-14T04:25:36.000Z" itemprop="datePublished">2020-06-14</time>
+</a>
     
   </div>
-</div>   
+  <div class="article-inner">
     
-
-
-
-      
-      
-  <div class="post-tags">
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/netcore/ >netcore</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/VSCode/ >VSCode</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <div class="mdui-video-container">
-<iframe src="//player.bilibili.com/player.html?aid=668616999&bvid=BV1Ba4y1Y7g9&cid=201927797&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> 
-</div>
----
-## 摘要
-- 特点
-文件在windows中方便管理，开发环境在linux调试效果真实
-- 注意
-本文章写于2...
-          
-          </div>
+      <header class="article-header">
         
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/">在Windows中安装Linux子系统和VSCode</a>
+    </h1>
+  
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/">在Windows中安装Linux子系统和VSCode</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-14
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-19
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/VSCode/ >VSCode</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/linux/ >linux</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/WSL/ >WSL</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <div class="mdui-video-container">
+        <div class="mdui-video-container">
 <iframe src="//player.bilibili.com/player.html?aid=583574175&bvid=BV1Sz4y1Q7iK&cid=201919405&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a...
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/">C#/Udp-6.在linux中运行.netcore版的接收器</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-14
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-14
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/C-UDP/">C#/UDP</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C/ >C#</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/netcore/ >.netcore</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/linux/ >linux</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/cross-platform/ >cross platform</a>
-      </i>
-    
-  </div>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+<li>特点<br>基于WSL安装，不需要虚拟机，不需要双系统</li>
+<li>步骤<br>WSL功能启用, Ubuntu系统安装，换源，VS Code安装</li>
+</ul>
+<hr>
+<h2 id="1-WSL功能启用"><a href="#1-WSL功能启用" class="headerlink" title="1.WSL功能启用"></a>1.WSL功能启用</h2><p>开始菜单 &gt; 设置 &gt; 应用 &gt; 程序和功能(右上角) &gt; 启用或关闭Windows功能(左上角)</p>
+<blockquote>
+<p>适用于Linux的Windows子系统 &gt; 重启</p>
+</blockquote>
+<h2 id="2-Ubuntu18-04LTS安装-2020年建议先用这个"><a href="#2-Ubuntu18-04LTS安装-2020年建议先用这个" class="headerlink" title="2.Ubuntu18.04LTS安装(2020年建议先用这个)"></a>2.Ubuntu18.04LTS安装(2020年建议先用这个)</h2><p>搜索（开始菜单旁边那个），输入store &gt; microsoft store &gt; 搜索ubuntu &gt; 安装18.04LTS</p>
+<h2 id="3-Ubuntu换源"><a href="#3-Ubuntu换源" class="headerlink" title="3.Ubuntu换源"></a>3.Ubuntu换源</h2><ul>
+<li>启动ubuntu<br>直接在开始菜单点图标，第一次打开要创建账号和密码<h3 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h3><ul>
+<li>记得拿小本子记好密码，不要乱输入忘了，短一点就好，不要有特殊符号不要数字开头</li>
+<li>linux下密码输入没有占位符提醒</li>
+</ul>
+</li>
+</ul>
+<h3 id="linux-command"><a href="#linux-command" class="headerlink" title="linux command:"></a>linux command:</h3><pre><code>- `ls` 查看当前目录下有什么鬼东西
+- `cd /mnt` goto my computer
+- `cd d` goto driver D
+- `cd ..` 返回上一级
+- `cd FOLDER_NAME` 移动到指定的文件夹
+- `dotnet new console` 在当前目录下创建一个.netcore控制台，项目名称与目录名称相同
+- `dotnet run` 运行.netcore程序，当前目录必须要有.netcore项目，并且有PROJECT_NAME.csproject文件
+- `clear` 清屏
+- `sudo apt-get install XX` 安装XX软件</code></pre><h3 id="换源文件"><a href="#换源文件" class="headerlink" title="换源文件"></a>换源文件</h3><ul>
+<li>移动当前目录 cd /etc/apt/</li>
+<li>备份源文件 sudo cp sources.list sources.list.bak</li>
+<li>修改源文件 sudo vim sources.list</li>
+<li>按两下g让光标到开头</li>
+<li>按d, 然后shift+g删除所有内容</li>
+<li>复制以下源<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></li>
+<li>按i进入插入模式（左下角显示INSERT），右键粘贴</li>
+<li>ESC退出插入模式</li>
+<li>:wq退出</li>
+<li>确认文件已更新 cat sources.list</li>
+</ul>
+<h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><ul>
+<li>sudo apt-get update</li>
+<li>sudo apt-get upgrade</li>
+</ul>
+<h3 id="安装VS-Code"><a href="#安装VS-Code" class="headerlink" title="安装VS Code"></a>安装VS Code</h3><ul>
+<li>输入code没有安装会自动安装</li>
+<li>安装好后再输入变成启动 </li>
+</ul>
+<hr>
 
       
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  踩坑，填坑，在VS中创建跨平台的.netcore的UdpReceiver控制台实例，running in linux</p>
-<h3 id="注意（Caution-大写加粗）"><a href="#注意（Caution-大写加粗）" class="headerlink" title="注意（Caution, 大写加粗）"></a>注意（Caution, 大写加粗）</h3><p>由于引用的Newtonsoft.Json在VS Code使用Nuge...
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/13/C-Udp-5-ViewModel%E4%B8%AD%E5%8F%91%E9%80%81%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">C#/Udp-5.ViewModel中发送功能的实现</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-13
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-13
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/C-UDP/">C#/UDP</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C/ >C#</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/json/ >json</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/MVVM/ >MVVM</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="在ViewModel中利用属性改变事件发起Udp通信"><a href="#在ViewModel中利用属性改变事件发起Udp通信" class="headerlink" title="  在ViewModel中利用属性改变事件发起Udp通信"></a>  在ViewModel中利用属性改变事件发起Udp通信</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言<...
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/13/C-Udp-5-ViewModel%E4%B8%AD%E5%8F%91%E9%80%81%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/13/C-Udp-4-WPF%E5%8F%91%E9%80%81%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">C#/Udp-4.WPF发送端界面设计</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-13
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-13
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/C-UDP/">C#/UDP</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C/ >C#</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/json/ >json</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/MVVM/ >MVVM</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/WPF/ >WPF</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="创建WPF-C-的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定"><a href="#创建WPF-C-的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定" class="headerlink" title="  创建WPF/C#的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定"></a>  创建WPF/C#的UdpSender客户端，并使用MVVM模式完成Name...
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/13/C-Udp-4-WPF%E5%8F%91%E9%80%81%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/13/C-Udp-3-class%E7%B1%BB%E5%88%B0json%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">C#/Udp-3.class类到json的序列化与反序列化</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-06-13
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-13
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/C-UDP/">C#/UDP</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C/ >C#</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/UDP/ >UDP</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/json/ >json</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="class类到json的序列化与反序列化"><a href="#class类到json的序列化与反序列化" class="headerlink" title="class类到json的序列化与反序列化"></a>class类到json的序列化与反序列化</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href=...
-          
-          </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/06/13/C-Udp-3-class%E7%B1%BB%E5%88%B0json%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">阅读更多</a>
-        </div>
-      </div>
-    </article>
-
-
-
-  <nav style="text-align: center;">
-    <div class="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-angle-right"></i></a>
     </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%92%8CVSCode/" data-id="ckbm9dnsk000pm0ue7avt9eb8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VSCode/" rel="tag">VSCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WSL/" rel="tag">WSL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C-Udp-6-在linux中运行-netcore版的接收器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/" class="article-date">
+  <time datetime="2020-06-14T01:34:23.000Z" itemprop="datePublished">2020-06-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-UDP/">C#/UDP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/">C#/Udp-6.在linux中运行.netcore版的接收器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  踩坑，填坑，在VS中创建跨平台的.netcore的UdpReceiver控制台实例，running in linux</p>
+<h3 id="注意（Caution-大写加粗）"><a href="#注意（Caution-大写加粗）" class="headerlink" title="注意（Caution, 大写加粗）"></a>注意（Caution, 大写加粗）</h3><p>由于引用的Newtonsoft.Json在VS Code使用Nuget添加引用会造成大坑（这就是我一直抵触SB无脑Nuget的原因, 倡导使用简单的库，而不是牛逼但是复杂，出了天坑都不会填），但是在VisualStudio中使用没有问题（所以怪我不会正确引用？）</p>
+<ul>
+<li>BUG in VS Code when using nuget to add reference<blockquote>
+<p>‘Newtonsoft.Json’ already has a dependency defined for ‘Microsoft.CSharp’    </p>
+</blockquote>
+</li>
+</ul>
+<p>更糟糕的是，我看了官方的issues，人家说这个不是bug，而且由于这个牛逼的库包含在了.NetCore 3.0 的Microsoft.Sharp中，所以可能只要你在自己的库中依赖过之后，再引用自己的库中都会完蛋。</p>
+<hr>
+<div class="mdui-video-container">
+<iframe src="//player.bilibili.com/player.html?bvid=BV1qp4y1D7av&cid=201853226&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
+<h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
+<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
+<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
+</ul>
+<h3 id="3-项目依赖（Dependency）"><a href="#3-项目依赖（Dependency）" class="headerlink" title="3.项目依赖（Dependency）"></a>3.项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
+<li><strong>Newtonsoft.Json</strong></li>
+</ul>
+<h3 id="4-项目地址-Source-code"><a href="#4-项目地址-Source-code" class="headerlink" title="4.项目地址(Source code)"></a>4.项目地址(Source code)<br></h3><ul>
+<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
+</ul>
+<h3 id="5-发行版获取（Realse）"><a href="#5-发行版获取（Realse）" class="headerlink" title="5.发行版获取（Realse）"></a>5.发行版获取（Realse）</h3><ul>
+<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<hr>
+<h2 id="解决方案（Solution）"><a href="#解决方案（Solution）" class="headerlink" title="解决方案（Solution）"></a>解决方案（Solution）</h2><h3 id="1-在VS中创建跨平台应用-Creat-a-netcore-console-in-VS"><a href="#1-在VS中创建跨平台应用-Creat-a-netcore-console-in-VS" class="headerlink" title="1.在VS中创建跨平台应用(Creat a .netcore console in VS)"></a>1.在VS中创建跨平台应用(Creat a .netcore console in VS)</h3><ul>
+<li>添加 &gt; 新建项目 &gt; .netcore &gt; console</li>
+<li>添加引用, nuget search and install <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<p><strong>坑爹提醒(Caution, super buggy)</strong></p>
+<ul>
+<li>在linux的.netcore sdk 3.0 <strong>DO NOT SUPPORT</strong>.netcore 2.0 app, 所以只能使用VS2019创建.netcore3.0的console<br>是不是开发python划时代的2.0-&gt;3.0的那波人跑去开发C#了，各种割裂</li>
+<li>在VS2019中引用的包的依赖，无法在Nuget中更新</li>
+<li>VS2019创建的项目，在linux中<code>dotnet run</code>后，VS中会出错，只能重生成<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpReceiver.Net45</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> LoongEgg.UdpCore.UdpReceiver(<span class="number">2233</span>);</span><br><span class="line">            receiver.ReaderAsync().Wait();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">"Good bye~"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>生成项目(build)</li>
+</ul>
+<h3 id="2-在linux中运行（running-in-linux）"><a href="#2-在linux中运行（running-in-linux）" class="headerlink" title="2.在linux中运行（running in linux）"></a>2.在linux中运行（running in linux）</h3><blockquote>
+<p>使用Windows 10中的WSL安装的<strong>Ubuntu18.04LTS</strong>为例，很多新东西都是坑，能不作就不要作</p>
+</blockquote>
+<h4 id="WSL-Ubuntun-command-tips"><a href="#WSL-Ubuntun-command-tips" class="headerlink" title="WSL Ubuntun command tips:"></a>WSL Ubuntun command tips:</h4><ul>
+<li><code>ls</code> 查看当前目录下有什么鬼东西</li>
+<li><code>cd /mnt</code> goto my computer</li>
+<li><code>cd d</code> goto driver D</li>
+<li><code>cd ..</code> 返回上一级</li>
+<li><code>cd FOLDER_NAME</code> 移动到指定的文件夹</li>
+<li><code>dotnet new console</code> 在当前目录下创建一个.netcore控制台，项目名称与目录名称相同</li>
+<li><code>dotnet run</code> 运行.netcore程序，当前目录必须要有.netcore项目，并且有PROJECT_NAME.csproject文件</li>
+<li><code>clear</code> 清屏<h4 id="Move-to-YOU-SOLUTION-FOLDER-in-wsl"><a href="#Move-to-YOU-SOLUTION-FOLDER-in-wsl" class="headerlink" title="Move to YOU_SOLUTION_FOLDER in wsl"></a>Move to YOU_SOLUTION_FOLDER in wsl</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">king@DESKTOP-N1M9MC7:~$ <span class="built_in">cd</span> /mnt/e</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e$ <span class="built_in">cd</span> linux/UdpReceiver.NetCoreLinux/</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e/linux/UdpReceiver.NetCoreLinux$ ls</span><br><span class="line">Program.cs  UdpReceiver.NetCoreLinux.csproj  bin  obj</span><br><span class="line">king@DESKTOP-N1M9MC7:/mnt/e/linux/UdpReceiver.NetCoreLinux$ dotnet run</span><br><span class="line">FXXK M$!</span><br><span class="line">06/14/2020 10:40:33 [ Info ] -&gt; E:\Published\LoongEgg.UdpCore\LoongEgg.UdpCore\UdpReceiver.cs &gt; .ctor() &gt; <span class="keyword">in</span> line[ 41]: Listening to Port=2233, GroupAddress=</span><br><span class="line">06/14/2020 10:40:33 [ Dbug ] -&gt; E:\Published\LoongEgg.UdpCore\LoongEgg.UdpCore\UdpReceiver.cs &gt; ReaderAsync() &gt; <span class="keyword">in</span> line[ 61]: Listening...</span><br></pre></td></tr></table></figure>
+<h2 id="坑爹提醒（Caution-super-buggy"><a href="#坑爹提醒（Caution-super-buggy" class="headerlink" title="坑爹提醒（Caution, super buggy)"></a>坑爹提醒（Caution, super buggy)</h2>重启VS，重开.sln不然满屏错误（reopen .sln）</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/" data-id="ckbm9dns9000cm0ue553tgtt3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netcore/" rel="tag">.netcore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cross-platform/" rel="tag">cross platform</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C-Udp-5-ViewModel中发送功能的实现" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/13/C-Udp-5-ViewModel%E4%B8%AD%E5%8F%91%E9%80%81%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="article-date">
+  <time datetime="2020-06-13T11:28:15.000Z" itemprop="datePublished">2020-06-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-UDP/">C#/UDP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/13/C-Udp-5-ViewModel%E4%B8%AD%E5%8F%91%E9%80%81%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">C#/Udp-5.ViewModel中发送功能的实现</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="在ViewModel中利用属性改变事件发起Udp通信"><a href="#在ViewModel中利用属性改变事件发起Udp通信" class="headerlink" title="  在ViewModel中利用属性改变事件发起Udp通信"></a>  在ViewModel中利用属性改变事件发起Udp通信</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
+<h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
+<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
+<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
+</ul>
+<h3 id="3-项目依赖（Dependency）"><a href="#3-项目依赖（Dependency）" class="headerlink" title="3.项目依赖（Dependency）"></a>3.项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
+<li><strong>Newtonsoft.Json</strong></li>
+</ul>
+<h3 id="4-项目地址-Source-code"><a href="#4-项目地址-Source-code" class="headerlink" title="4.项目地址(Source code)"></a>4.项目地址(Source code)<br></h3><ul>
+<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
+</ul>
+<h3 id="5-发行版获取"><a href="#5-发行版获取" class="headerlink" title="5.发行版获取"></a>5.发行版获取</h3><ul>
+<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<hr>
+<h2 id="在ViewModel中增加属性改变处理事件"><a href="#在ViewModel中增加属性改变处理事件" class="headerlink" title="在ViewModel中增加属性改变处理事件"></a>在ViewModel中增加属性改变处理事件</h2><ul>
+<li>AltPackViewModel.cs<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">readonly</span> UdpSender Sender;</span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 会启动Udp发送器的实例，默认采用组播模式，只需设置端口号一致即可接收到</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="config"&gt;</span>json配置实例<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="port"&gt;</span>端口号<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AltPackViewModel</span>(<span class="params">JsonPackConfig config, <span class="keyword">int</span> port</span>) : <span class="title">this</span>(<span class="params">config</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Gps.PropertyChanged += OnPropertyChanged;</span><br><span class="line">    Sender = <span class="keyword">new</span> UdpSender(port, <span class="literal">true</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 当属性改变时，调用Udp发送功能</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span> </span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnPropertyChanged</span>(<span class="params"><span class="keyword">object</span> sender, PropertyChangedEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (e.PropertyName == <span class="keyword">nameof</span>(AltViewModel.Readout))</span><br><span class="line">    &#123;</span><br><span class="line">        Sender?.SendAsync(<span class="string">$"Gps=<span class="subst">&#123;Gps.Readout&#125;</span>"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="更改程序启动代码"><a href="#更改程序启动代码" class="headerlink" title="更改程序启动代码"></a>更改程序启动代码</h2></li>
+<li>App.xaml.cs<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.DependencyInjection;</span><br><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> LoongEgg.UdpCore;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Windows;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpJsonSender.WPF</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> App.xaml 的交互逻辑</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">App</span> : <span class="title">Application</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnStartup</span>(<span class="params">StartupEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">base</span>.OnStartup(e);</span><br><span class="line">            IoC = <span class="keyword">new</span> Container();</span><br><span class="line"></span><br><span class="line">            Logger.EnableDebugLogger();</span><br><span class="line">            <span class="keyword">var</span> config = JsonPackConfig.DeserializeFromFile(AppDomain.CurrentDomain.BaseDirectory + <span class="string">"AltPack.json"</span>);</span><br><span class="line">            IoC.AddOrUpdate(<span class="keyword">new</span> AltPackViewModel( config, <span class="number">2233</span>)); <span class="comment">// 端口号与接收器一致</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 依赖注入容器</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> Container IoC &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h2 id="运行测试（注意，如果使用了LoongEgg-LoongLog可以在输出中跟踪程序运行情况）"><a href="#运行测试（注意，如果使用了LoongEgg-LoongLog可以在输出中跟踪程序运行情况）" class="headerlink" title="运行测试（注意，如果使用了LoongEgg.LoongLog可以在输出中跟踪程序运行情况）"></a>运行测试（注意，如果使用了LoongEgg.LoongLog可以在输出中跟踪程序运行情况）</h2><h3 id="1-启动WPF程序"><a href="#1-启动WPF程序" class="headerlink" title="1.启动WPF程序"></a>1.启动WPF程序</h3><h3 id="2-启动前面创建的接收端"><a href="#2-启动前面创建的接收端" class="headerlink" title="2.启动前面创建的接收端"></a>2.启动前面创建的<a href="https://loongegg.github.io/2020/06/13/C-Udp-2-%E6%94%B6%E5%8F%91%E9%80%9A%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%88%9B%E5%BB%BA/">接收端</a></h3><h3 id="3-拖动GPS的Slider条检查程序运行情况"><a href="#3-拖动GPS的Slider条检查程序运行情况" class="headerlink" title="3.拖动GPS的Slider条检查程序运行情况"></a>3.拖动GPS的Slider条检查程序运行情况</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/13/C-Udp-5-ViewModel%E4%B8%AD%E5%8F%91%E9%80%81%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/" data-id="ckbm9dns70009m0ueg1p6f2jo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MVVM/" rel="tag">MVVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/" rel="tag">json</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C-Udp-4-WPF发送端界面设计" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/13/C-Udp-4-WPF%E5%8F%91%E9%80%81%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="article-date">
+  <time datetime="2020-06-13T06:13:17.000Z" itemprop="datePublished">2020-06-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-UDP/">C#/UDP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/13/C-Udp-4-WPF%E5%8F%91%E9%80%81%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">C#/Udp-4.WPF发送端界面设计</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="创建WPF-C-的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定"><a href="#创建WPF-C-的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定" class="headerlink" title="  创建WPF/C#的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定"></a>  创建WPF/C#的UdpSender客户端，并使用MVVM模式完成Name和Unit的绑定</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
+<h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
+<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
+<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
+</ul>
+<h3 id="3-项目依赖（Dependency）"><a href="#3-项目依赖（Dependency）" class="headerlink" title="3.项目依赖（Dependency）"></a>3.项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.DependencyInjection</strong> IoC container , you can get it from nuget or my <a href="https://github.com/loongEgg/DependencyInjection" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.MvvmCore</strong>  an OpenSource cross-platform &amp; cross-framework Mvvm lib , you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.MvvmCore" target="_blank" rel="noopener">github</a></li>
+<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
+<li><strong>Newtonsoft.Json</strong></li>
+</ul>
+<h3 id="4-项目地址-Source-code"><a href="#4-项目地址-Source-code" class="headerlink" title="4.项目地址(Source code)"></a>4.项目地址(Source code)<br></h3><ul>
+<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
+</ul>
+<h3 id="5-发行版获取"><a href="#5-发行版获取" class="headerlink" title="5.发行版获取"></a>5.发行版获取</h3><ul>
+<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<hr>
+<h2 id="ViewModels"><a href="#ViewModels" class="headerlink" title="ViewModels"></a>ViewModels</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.MvvmCore;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> | 个人微信：InnerGeeker</span></span><br><span class="line"><span class="comment"> | 联系邮箱：LoongEgg@163.com </span></span><br><span class="line"><span class="comment"> | 创建时间：2020/6/13 17:00:07</span></span><br><span class="line"><span class="comment"> | 主要用途：</span></span><br><span class="line"><span class="comment"> | 更改记录：</span></span><br><span class="line"><span class="comment"> |			 时间		版本		更改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpJsonSender.WPF</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AltViewModel</span> : <span class="title">ViewModel</span></span><br><span class="line">    &#123; </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Name</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Name; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Name, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">string</span> _Name; </span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Unit</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Unit; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Unit, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">string</span> _Unit;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Maximum</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Maximum; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Maximum, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">double</span> _Maximum;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Minimum</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Minimum; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Minimum, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">double</span> _Minimum;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> Readout</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _Readout; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _Readout, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">double</span> _Readout;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.MvvmCore;</span><br><span class="line"><span class="keyword">using</span> LoongEgg.UdpCore;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> | 个人微信：InnerGeeker</span></span><br><span class="line"><span class="comment"> | 联系邮箱：LoongEgg@163.com </span></span><br><span class="line"><span class="comment"> | 创建时间：2020/6/13 17:11:16</span></span><br><span class="line"><span class="comment"> | 主要用途：</span></span><br><span class="line"><span class="comment"> | 更改记录：</span></span><br><span class="line"><span class="comment"> |			 时间		版本		更改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpJsonSender.WPF</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AltPackViewModel</span> : <span class="title">ViewModel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">internal</span> <span class="keyword">static</span> AltPackViewModel DesignInstance &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">        = <span class="keyword">new</span> AltPackViewModel(</span><br><span class="line">            JsonPackConfig.DeserializeFromFile(</span><br><span class="line">                <span class="string">@"E:\Published\LoongEgg.UdpCore\UdpJsonSender.WPF\AltPack.json"</span>)); <span class="comment">// 根据你自己实际的文件路径写</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> PackName</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _PackName; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _PackName, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">string</span> _PackName;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">byte</span> PackId</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> _PackId; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; SetProperty(<span class="keyword">ref</span> _PackId, <span class="keyword">value</span>); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">byte</span> _PackId;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> AltViewModel Gps &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> AltViewModel Baro &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">AltPackViewModel</span>(<span class="params">JsonPackConfig config</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Gps = <span class="keyword">new</span> AltViewModel</span><br><span class="line">            &#123;</span><br><span class="line">                Name = config.Items[<span class="number">0</span>].Name,</span><br><span class="line">                Unit = config.Items[<span class="number">0</span>].Unit,</span><br><span class="line">                Minimum = config.Items[<span class="number">0</span>].Minimum,</span><br><span class="line">                Maximum = config.Items[<span class="number">0</span>].Maximum</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            Baro = <span class="keyword">new</span> AltViewModel</span><br><span class="line">            &#123;</span><br><span class="line">                Name = config.Items[<span class="number">1</span>].Name,</span><br><span class="line">                Unit = config.Items[<span class="number">1</span>].Unit,</span><br><span class="line">                Minimum = config.Items[<span class="number">1</span>].Minimum,</span><br><span class="line">                Maximum = config.Items[<span class="number">1</span>].Maximum</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            PackName = config.PackName;</span><br><span class="line">            PackId = config.PackID;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="App启动设置"><a href="#App启动设置" class="headerlink" title="App启动设置"></a>App启动设置</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.DependencyInjection;</span><br><span class="line"><span class="keyword">using</span> LoongEgg.UdpCore;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Windows;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpJsonSender.WPF</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> App.xaml 的交互逻辑</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">App</span> : <span class="title">Application</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnStartup</span>(<span class="params">StartupEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">base</span>.OnStartup(e);</span><br><span class="line">            IoC = <span class="keyword">new</span> Container();</span><br><span class="line">            IoC.AddOrUpdate(<span class="keyword">new</span> AltPackViewModel(</span><br><span class="line">                JsonPackConfig.DeserializeFromFile(AppDomain.CurrentDomain.BaseDirectory + <span class="string">"AltPack.json"</span>)));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 依赖注入容器</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> Container IoC &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="前台绑定"><a href="#前台绑定" class="headerlink" title="前台绑定"></a>前台绑定</h2><p>注意用来提供语法提示的设计时绑定 <code>d:DataContext=&quot;{x:Static local:AltPackViewModel.DesignInstance}&quot;</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Window</span></span></span><br><span class="line"><span class="tag">    <span class="attr">x:Class</span>=<span class="string">"UdpJsonSender.WPF.MainWindow"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:x</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:d</span>=<span class="string">"http://schemas.microsoft.com/expression/blend/2008"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:local</span>=<span class="string">"clr-namespace:UdpJsonSender.WPF"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:mc</span>=<span class="string">"http://schemas.openxmlformats.org/markup-compatibility/2006"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Title</span>=<span class="string">"MainWindow"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Width</span>=<span class="string">"600"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Height</span>=<span class="string">"300"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d:DataContext</span>=<span class="string">"&#123;x:Static local:AltPackViewModel.DesignInstance&#125;"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">FontSize</span>=<span class="string">"26"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Foreground</span>=<span class="string">"Black"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">mc:Ignorable</span>=<span class="string">"d"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">RowDefinition</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">RowDefinition</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">StackPanel</span></span></span><br><span class="line"><span class="tag">            <span class="attr">Grid.Row</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">HorizontalAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">TextBlock</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Run</span>&gt;</span>PackName:<span class="tag">&lt;/<span class="name">Run</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding PackName&#125;"</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Run</span>&gt;</span>, PackID:<span class="tag">&lt;/<span class="name">Run</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding PackId&#125;"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ListBox</span> <span class="attr">Grid.Row</span>=<span class="string">"1"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ListBoxItem</span> <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">DataContext</span>=<span class="string">"&#123;Binding Gps&#125;"</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Width</span>=<span class="string">"250"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Name&#125;"</span> /&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Readout, StringFormat=&#123;&#125;&#123;0:f1&#125;&#125;"</span> /&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Unit, StringFormat=(&#123;0&#125;)&#125;"</span> /&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">Slider</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Width</span>=<span class="string">"300"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Maximum</span>=<span class="string">"&#123;Binding Maximum&#125;"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Minimum</span>=<span class="string">"&#123;Binding Minimum&#125;"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Value</span>=<span class="string">"&#123;Binding Readout&#125;"</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ListBoxItem</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">ListBoxItem</span> <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">DataContext</span>=<span class="string">"&#123;Binding Baro&#125;"</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Width</span>=<span class="string">"250"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Name&#125;"</span> /&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Readout, StringFormat=&#123;&#125;&#123;0:f1&#125;&#125;"</span> /&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Run</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Unit, StringFormat=(&#123;0&#125;)&#125;"</span> /&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">Slider</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Width</span>=<span class="string">"300"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Maximum</span>=<span class="string">"&#123;Binding Maximum&#125;"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Minimum</span>=<span class="string">"&#123;Binding Minimum&#125;"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">Value</span>=<span class="string">"&#123;Binding Readout&#125;"</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ListBoxItem</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ListBox</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Window</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="DataContext后台设置"><a href="#DataContext后台设置" class="headerlink" title="DataContext后台设置"></a>DataContext后台设置</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Windows;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">UdpJsonSender.WPF</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> MainWindow.xaml 的交互逻辑</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">MainWindow</span> : <span class="title">Window</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MainWindow</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">            DataContext = (Application.Current <span class="keyword">as</span> App).IoC.Get&lt;AltPackViewModel&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/13/C-Udp-4-WPF%E5%8F%91%E9%80%81%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" data-id="ckbm9dnrp0000m0ue1gn72aid" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MVVM/" rel="tag">MVVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/" rel="tag">WPF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/" rel="tag">json</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C-Udp-3-class类到json的序列化与反序列化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/13/C-Udp-3-class%E7%B1%BB%E5%88%B0json%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="article-date">
+  <time datetime="2020-06-13T05:46:21.000Z" itemprop="datePublished">2020-06-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-UDP/">C#/UDP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/13/C-Udp-3-class%E7%B1%BB%E5%88%B0json%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">C#/Udp-3.class类到json的序列化与反序列化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h2 id="class类到json的序列化与反序列化"><a href="#class类到json的序列化与反序列化" class="headerlink" title="class类到json的序列化与反序列化"></a>class类到json的序列化与反序列化</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
+<h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
+<li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
+<li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
+</ul>
+<h3 id="3-项目依赖（Dependency）"><a href="#3-项目依赖（Dependency）" class="headerlink" title="3.项目依赖（Dependency）"></a>3.项目依赖（Dependency）</h3><ul>
+<li><strong>LoongEgg.LoongLog</strong> an OpenSource cross-platform &amp; cross-framework log tool, you can get it from nuget or my <a href="https://github.com/loongEgg/LoongEgg.LoongLog" target="_blank" rel="noopener">github</a></li>
+<li><strong>Newtonsoft.Json</strong></li>
+</ul>
+<h3 id="4-项目地址-Source-code"><a href="#4-项目地址-Source-code" class="headerlink" title="4.项目地址(Source code)"></a>4.项目地址(Source code)<br></h3><ul>
+<li><a href="https://github.com/loongEgg/LoongEgg.UdpCore" target="_blank" rel="noopener">github</a> </li>
+</ul>
+<h3 id="5-发行版获取"><a href="#5-发行版获取" class="headerlink" title="5.发行版获取"></a>5.发行版获取</h3><ul>
+<li>Search in nuget: <strong>LoongEgg.UdpCore</strong></li>
+</ul>
+<hr>
+<h2 id="基本json文件"><a href="#基本json文件" class="headerlink" title="基本json文件"></a>基本json文件</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"PackName"</span>: <span class="string">"AltitudePack"</span>,</span><br><span class="line">  <span class="attr">"PackID"</span>: <span class="number">233</span>,</span><br><span class="line">  <span class="attr">"Items"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"Name"</span>: <span class="string">"GPS_Alt"</span>,</span><br><span class="line">      <span class="attr">"Unit"</span>: <span class="string">"m"</span>,</span><br><span class="line">      <span class="attr">"Length"</span>: <span class="number">2</span>,</span><br><span class="line">      <span class="attr">"BigEndian"</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">"Resolution"</span>: <span class="number">1.0</span>,</span><br><span class="line">      <span class="attr">"Signed"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"Maximum"</span>: <span class="number">100</span>,</span><br><span class="line">      <span class="attr">"Minimum"</span>: <span class="number">-100</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"Name"</span>: <span class="string">"BRAVO_Alt"</span>,</span><br><span class="line">      <span class="attr">"Unit"</span>: <span class="string">"m"</span>,</span><br><span class="line">      <span class="attr">"Length"</span>: <span class="number">2</span>,</span><br><span class="line">      <span class="attr">"BigEndian"</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">"Resolution"</span>: <span class="number">0.5</span>,</span><br><span class="line">      <span class="attr">"Signed"</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">"Maximum"</span>: <span class="number">100</span>,</span><br><span class="line">      <span class="attr">"Minimum"</span>: <span class="number">-100</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单个数据项定义"><a href="#单个数据项定义" class="headerlink" title="单个数据项定义"></a>单个数据项定义</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> | 个人微信：InnerGeeker</span></span><br><span class="line"><span class="comment"> | 联系邮箱：LoongEgg@163.com </span></span><br><span class="line"><span class="comment"> | 创建时间：2020/6/12 20:24:28</span></span><br><span class="line"><span class="comment"> | 主要用途：数据包中单个数据项的定义</span></span><br><span class="line"><span class="comment"> | 更改记录：</span></span><br><span class="line"><span class="comment"> |			 时间		版本		更改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">LoongEgg.UdpCore</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 单个数据项定义</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ItemConfig</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 数据名称</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Name &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 单位</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Unit &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 字节长度</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Length &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 大端在前？</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">bool</span> BigEndian &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 数据精度，精度乘以传进来的数据=实际的数值</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">float</span> Resolution &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 有无符号？</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">bool</span> Signed &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 数据的最大值</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">float</span> Maximum &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 数据的最小值</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">float</span> Minimum &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 打印数据定义信息到字符串</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>格式化后的定义信息<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">string</span> <span class="title">ToString</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">$"Name=<span class="subst">&#123;Name&#125;</span>, Unit=<span class="subst">&#123;Unit&#125;</span>, Resolution=<span class="subst">&#123;Resolution&#125;</span>, Signed="</span> </span><br><span class="line">                + (Signed ? <span class="string">"true"</span> : <span class="string">"false"</span>) </span><br><span class="line">                + <span class="string">$", Maximum=<span class="subst">&#123;Maximum&#125;</span>, Minimum=<span class="subst">&#123;Minimum&#125;</span>"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单个json文件对应的class定义"><a href="#单个json文件对应的class定义" class="headerlink" title="单个json文件对应的class定义"></a>单个json文件对应的class定义</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Newtonsoft.Json;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> | 个人微信：InnerGeeker</span></span><br><span class="line"><span class="comment"> | 联系邮箱：LoongEgg@163.com</span></span><br><span class="line"><span class="comment"> | 创建时间：2020/6/12 20:41:39</span></span><br><span class="line"><span class="comment"> | 主要用途：从json文件读取数据包协议</span></span><br><span class="line"><span class="comment"> | 更改记录：</span></span><br><span class="line"><span class="comment"> |			 时间		版本		更改</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">LoongEgg.UdpCore</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 数据包，可以直接从json文件反序列化</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">JsonPackConfig</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 当前包的名字</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span> </span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> PackName &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125; = <span class="string">"[Undefined]"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 当前包的ID号, 注意为单字节无符号数</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">byte</span> PackID &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 包的字节总长度, 注意最大长度为255</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">byte</span> Length</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">if</span> (Items.Any())</span><br><span class="line">                &#123;</span><br><span class="line">                    Items.ForEach(i =&gt; count += i.Length);</span><br><span class="line">                    <span class="keyword">return</span> (<span class="keyword">byte</span>)count;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 数据对象定义的集合</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> List&lt;ItemConfig&gt; Items &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 从指定的文件反序列化数据包的定义</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="path"&gt;</span>文件路径<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>反序列化后的数据包<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> JsonPackConfig <span class="title">DeserializeFromFile</span>(<span class="params"><span class="keyword">string</span> path</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">using</span> (StreamReader reader = File.OpenText(path))</span><br><span class="line">            &#123;</span><br><span class="line">                JsonSerializer serializer = JsonSerializer.Create();</span><br><span class="line">                <span class="keyword">var</span> pack = serializer.Deserialize(reader, <span class="keyword">typeof</span>(JsonPackConfig)) <span class="keyword">as</span> JsonPackConfig;</span><br><span class="line">                <span class="keyword">return</span> pack;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 将协议转换为json字符串形式</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">string</span> <span class="title">SerializeToJsonString</span>(<span class="params"></span>)</span> =&gt; JsonConvert.SerializeObject(<span class="keyword">this</span>, Formatting.Indented);</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 将所有的数据协议项转换为一个字符串</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span> </span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">string</span> <span class="title">ToString</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            StringBuilder builder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">            builder.AppendLine(<span class="string">$"PackName=<span class="subst">&#123;PackName&#125;</span>, PackID=<span class="subst">&#123;PackID&#125;</span>:"</span>);</span><br><span class="line">            <span class="keyword">if</span> (Items.Any())</span><br><span class="line">            &#123;</span><br><span class="line">                Items.ForEach(</span><br><span class="line">                    i =&gt;</span><br><span class="line">                    &#123;</span><br><span class="line">                        builder.AppendLine(i.ToString());</span><br><span class="line">                    &#125;);</span><br><span class="line">                <span class="keyword">return</span> builder.ToString();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"JsonPackDefinition is undefined"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="运用实例"><a href="#运用实例" class="headerlink" title="运用实例"></a>运用实例</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Diagnostics;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">LoongEgg.UdpCore.JsonDemo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                JsonPackConfig pack = JsonPackConfig.DeserializeFromFile(<span class="string">"AltPack.json"</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">"Desializing..."</span>);</span><br><span class="line">                Console.WriteLine(pack.ToString());</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">"Serializing..."</span>);</span><br><span class="line">                Console.WriteLine(pack.SerializeToJsonString());</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(ex.Message);</span><br><span class="line">            &#125; </span><br><span class="line"></span><br><span class="line">            Debugger.Break();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/13/C-Udp-3-class%E7%B1%BB%E5%88%B0json%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" data-id="ckbm9dns60008m0uef7bre1xx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UDP/" rel="tag">UDP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/" rel="tag">json</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &amp;raquo;</a>
   </nav>
 
-  </main>
-  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
-  <div class="mdui-container">
-    <div class="mdui-row">
-      
-        <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank"></a>
-      
-      <span>
-        &copy; 2015 - 2020 
+</section>
         
-          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-UDP/">C#/UDP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/">C#类型变换&扩展属性</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WPF-Xaml/">WPF/Xaml</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/netcore/" rel="tag">.netcore</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/" rel="tag">C#扩展属性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Event/" rel="tag">Event</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EventArgs/" rel="tag">EventArgs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVVM/" rel="tag">MVVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UDP/" rel="tag">UDP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VSCode/" rel="tag">VSCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WPF/" rel="tag">WPF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WSL/" rel="tag">WSL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xaml/" rel="tag">Xaml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-platform/" rel="tag">cross platform</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linq/" rel="tag">linq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/netcore/" rel="tag">netcore</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/netcore/" style="font-size: 10px;">.netcore</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/" style="font-size: 10px;">C#扩展属性</a> <a href="/tags/Event/" style="font-size: 10px;">Event</a> <a href="/tags/EventArgs/" style="font-size: 10px;">EventArgs</a> <a href="/tags/MVVM/" style="font-size: 13.33px;">MVVM</a> <a href="/tags/UDP/" style="font-size: 16.67px;">UDP</a> <a href="/tags/VSCode/" style="font-size: 13.33px;">VSCode</a> <a href="/tags/WPF/" style="font-size: 16.67px;">WPF</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/Xaml/" style="font-size: 10px;">Xaml</a> <a href="/tags/cross-platform/" style="font-size: 10px;">cross platform</a> <a href="/tags/json/" style="font-size: 16.67px;">json</a> <a href="/tags/linq/" style="font-size: 10px;">linq</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/netcore/" style="font-size: 10px;">netcore</a> <a href="/tags/string/" style="font-size: 13.33px;">string</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
         
-        Loong Egg
-      </span>
+          <li>
+            <a href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/">WPF/Xaml技巧-2.给自定义frameworkelement加上文字FormattedText</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-2.byteArray数组转为一个字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-1.去空格并以指定字符分割字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">WPF/Xaml技巧-1.TypeConverter实现自定义范围</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/14/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91ubuntu%E4%B8%AD%E7%9A%84-netcore%E9%A1%B9%E7%9B%AE/">在Windows中使用VSCode远程开发ubuntu中的.netcore项目</a>
+          </li>
+        
+      </ul>
     </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
-        </div>
-      
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Loong Egg<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
-        </div>
-      
-    </div>
- </div>
+  </div>
 </footer>
+    </div>
+    <nav id="mobile-nav">
   
-  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+    <a href="/" class="mobile-nav-link">Home</a>
   
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
+</nav>
+    
 
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-<script src="/js/mdui.min.js"></script>
-<script src="/js/meadow.js"></script>
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
 </body>
-</html >
+</html>
