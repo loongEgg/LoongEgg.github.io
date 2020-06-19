@@ -207,7 +207,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-18
+      更新于:&nbsp;2020-06-19
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -276,6 +276,8 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h2 id="一行大法"><a href="#一行大法" class="headerlink" title="一行大法"></a>一行大法</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> LoongEgg.LoongLog;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Lesson.UdpCore.Receiver</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Logger.Enable(Loggers.ConsoleLogger);</span><br><span class="line">            <span class="keyword">var</span> receiver = <span class="keyword">new</span> UdpReceiver();</span><br><span class="line">            receiver.MessageReceived += Receiver_MessageReceived;</span><br><span class="line">            receiver.ReceiveAsync().Wait();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Receiver_MessageReceived</span>(<span class="params"><span class="keyword">object</span> sender, UdpReceivedEventArgs args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">byte</span>[] buff = args.Buffer;</span><br><span class="line">            <span class="comment">// 一行将byte[]转为字符串</span></span><br><span class="line">            <span class="keyword">string</span> rec = String.Join(<span class="string">","</span>, buff.Select(b =&gt; b.ToString()).ToArray());</span><br><span class="line">            Console.WriteLine(rec);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
   </div>
   <!--文末结束语-->
   
@@ -286,6 +288,11 @@
   <div class="mdui-divider"></div>
   
   <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>WPF/Xaml技巧-2.给自定义frameworkelement加上文字FormattedText</span>
+      </a>
     
     
       <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">

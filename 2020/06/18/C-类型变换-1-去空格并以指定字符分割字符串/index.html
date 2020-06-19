@@ -207,7 +207,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-06-18
+      更新于:&nbsp;2020-06-19
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -264,11 +264,11 @@
   <div class="post-tags">
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/ >C#扩展属性</a>
+        <a rel="tag" href = /tags/string/ >string</a>
       </i>
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/string/ >string</a>
+        <a rel="tag" href = /tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/ >C#扩展属性</a>
       </i>
     
   </div>
@@ -276,6 +276,8 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h2 id="StringExtensions-cs"><a href="#StringExtensions-cs" class="headerlink" title="StringExtensions.cs"></a>StringExtensions.cs</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">StringExtensions</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 以扩展属性的形式分割字符串为字符串数组</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;example&gt;</span><span class="doctag">&lt;code&gt;</span>YourString.SplitAndRemoveSpace(',', '\t');<span class="doctag">&lt;/code&gt;</span><span class="doctag">&lt;/example&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="self"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="seprator"&gt;</span>用来分割的字符们<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">string</span>[] <span class="title">SplitAndRemoveSpace</span>(<span class="params"><span class="keyword">this</span> <span class="keyword">string</span> self, <span class="keyword">params</span> <span class="keyword">char</span>[] seprator</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">string</span> spaceRemoved = self.Replace(<span class="string">" "</span>, <span class="keyword">string</span>.Empty);</span><br><span class="line">        <span class="keyword">string</span>[] splited = spaceRemoved.Split(seprator, StringSplitOptions.RemoveEmptyEntries);</span><br><span class="line">        <span class="keyword">return</span> splited;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
   </div>
   <!--文末结束语-->
   
