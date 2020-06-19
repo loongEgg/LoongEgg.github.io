@@ -12,8 +12,11 @@
 <div class="mdui-video-container">
 <iframe src="//player.bilibili.com/player.html?aid=541118085&bvid=BV1si4y1G7w4&cid=203314215&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
+---
+## 前言
+### 1.系列主题
+本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender & Receiver using json file to configure
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
 <h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
 <li><strong>.net framework 4.5</strong> to support using in <strong>windows</strong> with <strong>.net framework &gt;= 4.5</strong></li>
 <li><strong>.net standard 2.0</strong> to support using in <strong>linux</strong> with <strong>.net core &gt;= 2.0</strong></li>
@@ -312,12 +315,16 @@
     <content><![CDATA[<div class="mdui-video-container">
 <iframe src="//player.bilibili.com/player.html?aid=668616999&bvid=BV1Ba4y1Y7g9&cid=201927797&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> 
 </div>
+---
+## 摘要
+- 特点
+文件在windows中方便管理，开发环境在linux调试效果真实
+- 注意
+本文章写于2020年，基于WSL中的ubuntu18.04LTS, 目标为.netcore 3.1 sdk
+可能缺少一些插件比如C#在VS Code插件中安装，有些插件会自动提示安装，要记得点yes比如VS code的WSL插件
+---
 
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
-<li>特点<br>文件在windows中方便管理，开发环境在linux调试效果真实</li>
-<li>注意<br>本文章写于2020年，基于WSL中的ubuntu18.04LTS, 目标为.netcore 3.1 sdk<br>可能缺少一些插件比如C#在VS Code插件中安装，有些插件会自动提示安装，要记得点yes比如VS code的WSL插件</li>
-</ul>
-<hr>
+
 <h2 id="1-dotnetcore-sdk-安装"><a href="#1-dotnetcore-sdk-安装" class="headerlink" title="1.dotnetcore sdk 安装"></a>1.dotnetcore sdk 安装</h2><ul>
 <li>官网信息<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu</a></li>
 </ul>
