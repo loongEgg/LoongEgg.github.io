@@ -15,7 +15,7 @@
 <meta property="og:description" content="摘要  踩坑，填坑，在VS中创建跨平台的.netcore的UdpReceiver控制台实例，running in linux 注意（Caution, 大写加粗）由于引用的Newtonsoft.Json在VS Code使用Nuget添加引用会造成大坑（这就是我一直抵触SB无脑Nuget的原因, 倡导使用简单的库，而不是牛逼但是复杂，出了天坑都不会填），但是在VisualStudio中使用没有问题（所">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-14T01:34:23.000Z">
-<meta property="article:modified_time" content="2020-06-14T05:47:13.232Z">
+<meta property="article:modified_time" content="2020-06-21T05:55:30.212Z">
 <meta property="article:author" content="Loong Egg">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content=".netcore">
@@ -106,9 +106,8 @@
 </ul>
 <p>更糟糕的是，我看了官方的issues，人家说这个不是bug，而且由于这个牛逼的库包含在了.NetCore 3.0 的Microsoft.Sharp中，所以可能只要你在自己的库中依赖过之后，再引用自己的库中都会完蛋。</p>
 <hr>
-<div class="mdui-video-container">
-<iframe src="//player.bilibili.com/player.html?bvid=BV1qp4y1D7av&cid=201853226&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-</div>
+<iframe  width="740" height="576"  src="//player.bilibili.com/player.html?bvid=BV1qp4y1D7av&cid=201853226&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="1-系列主题"><a href="#1-系列主题" class="headerlink" title="1.系列主题"></a>1.系列主题</h3><p>本系列文章，旨在实现使用Json进行配置的Udp收发器 An Udp Sender &amp; Receiver using json file to configure</p>
 <h3 id="2-目标框架-target-framework"><a href="#2-目标框架-target-framework" class="headerlink" title="2.目标框架(target framework)"></a>2.目标框架(target framework)</h3><ul>
@@ -157,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://loongegg.github.io/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/" data-id="ckbm9dns9000cm0ue553tgtt3" class="article-share-link">Share</a>
+      <a data-url="https://loongegg.github.io/2020/06/14/C-Udp-6-%E5%9C%A8linux%E4%B8%AD%E8%BF%90%E8%A1%8C-netcore%E7%89%88%E7%9A%84%E6%8E%A5%E6%94%B6%E5%99%A8/" data-id="ckbonqdna000casue41mndtyy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netcore/" rel="tag">.netcore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cross-platform/" rel="tag">cross platform</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
