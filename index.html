@@ -99,7 +99,7 @@
 <li><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
 <li>创建github仓库</li>
 <li>在本地电脑初始化git并配置</li>
-<li>新建html网页并发布</li>
+<li>发布到Github Page</li>
 </ol>
 </li>
 <li><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
@@ -112,18 +112,25 @@
 <li>在github网页右上角 <code>+ &gt; New Reposity</code></li>
 <li>创建一个名为<code>[YOUR_GITHUB_NAME].github.io</code>的代码仓库（PS: 这样的话生成github page后的访问域名为<code>https://[YOUR_GITHUB_NAME].github.io</code>，看起来像自己的官方网站）</li>
 <li>直接<code>Creat Reposity</code>不需要设置readme之类的</li>
-<li>复制一下代码仓库地址，比如我的是<code>https://github.com/innergeek/innergeek.github.io.git</code><h2 id="2-在本地初始化Git并配置"><a href="#2-在本地初始化Git并配置" class="headerlink" title="2. 在本地初始化Git并配置"></a>2. 在本地初始化Git并配置</h2><ul>
+<li>复制一下代码仓库地址，比如我的是<code>https://github.com/innergeek/innergeek.github.io.git</code></li>
+</ul>
+<h2 id="2-在本地初始化Git并配置"><a href="#2-在本地初始化Git并配置" class="headerlink" title="2. 在本地初始化Git并配置"></a>2. 在本地初始化Git并配置</h2><ul>
 <li>在电脑合适的地方创建一个文件夹，比如我的为<code>E:\blog\innergeek.github.io</code></li>
-<li>初始化Git</li>
+<li>初始化Git<ul>
 <li>在文件夹中 <code>右键 &gt; Git bash here</code></li>
 <li>在命令行中输入<code>git init</code></li>
 <li>关联到远端代码仓库在命令行中输入<code>git remote add origin https://github.com/[YOUR_GITHUB_NAME]/[YOUR_GITHUB_NAME].github.io.git</code>， 我的示范命令为`git remote add origin <a href="https://github.com/innergeek/innergeek.github.io.git" target="_blank" rel="noopener">https://github.com/innergeek/innergeek.github.io.git</a></li>
-<li>创建一个简单网页</li>
-<li>在文件夹中<code>右键 &gt; 通过 Code 打开</code></li>
-<li>创建一个<code>index.html</code>并保存，内容如下<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     hello github page</span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>发布</li>
 </ul>
 </li>
+<li>创建一个简单网页<ul>
+<li>在文件夹中<code>右键 &gt; 通过 Code 打开</code></li>
+<li>创建一个<code>index.html</code>并保存，内容如下<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     hello github page</span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-发布到Github-Page"><a href="#3-发布到Github-Page" class="headerlink" title="3.发布到Github Page"></a>3.发布到Github Page</h2><ul>
 <li>配置代码库的账号和密码（注意防止泄露）<ul>
 <li>在文件夹中找到<code>.git &gt; config</code>拖到VSCode中</li>
 <li>把以下内容<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   [remote &quot;origin&quot;]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;[YOUR_GITHUB_NAME]&#x2F;[YOUR_GITHUB_NAME].github.io.git</span><br><span class="line">fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br></pre></td></tr></table></figure>
