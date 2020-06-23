@@ -457,10 +457,13 @@
 <li>安装和配置<code>Debugger for Chrome</code></li>
 <li>运行和调试</li>
 </ol>
-<h2 id="1-创建项目文件"><a href="#1-创建项目文件" class="headerlink" title="1.创建项目文件"></a>1.创建项目文件</h2><h3 id="0）-文件结构"><a href="#0）-文件结构" class="headerlink" title="0） 文件结构"></a>0） 文件结构</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">+[YOUR_PROJECT_FOLDER]</span><br><span class="line">|----index.html</span><br><span class="line">|----index.js  </span><br><span class="line">|---+.vscode</span><br><span class="line">    |----launch.json &#x2F;&#x2F; 这个配置文件在安装插件时会自动插入</span><br></pre></td></tr></table></figure>
-<h3 id="1）-index-html"><a href="#1）-index-html" class="headerlink" title="1） index.html"></a>1） index.html</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"index.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span>A Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>Try it<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="2）-index-js"><a href="#2）-index-js" class="headerlink" title="2） index.js"></a>2） index.js</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"My First JavaScript Function"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-创建项目文件"><a href="#1-创建项目文件" class="headerlink" title="1.创建项目文件"></a>1.创建项目文件</h2><ul>
+<li><h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">+[YOUR_PROJECT_FOLDER]</span><br><span class="line">|----index.html</span><br><span class="line">|----index.js  </span><br><span class="line">|---+.vscode</span><br><span class="line">    |----launch.json &#x2F;&#x2F; 这个配置文件在安装插件时会自动插入</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"index.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span>A Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>Try it<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="index-js"><a href="#index-js" class="headerlink" title="index.js"></a>index.js</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"My First JavaScript Function"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
 <h2 id="2-安装和配置Debugger-for-Chrome"><a href="#2-安装和配置Debugger-for-Chrome" class="headerlink" title="2.安装和配置Debugger for Chrome"></a>2.安装和配置<code>Debugger for Chrome</code></h2><p>1) 在VSCode的扩展中搜索并安装<code>Debugger for Chrome</code><br>2) 配置出现的<code>launch.json</code></p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</span><br><span class="line">    <span class="attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"chrome"</span>,</span><br><span class="line">            <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"Launch Chrome against localhost"</span>,</span><br><span class="line">            <span class="attr">"url"</span>: <span class="string">"http://localhost:8080"</span>,</span><br><span class="line">            <span class="attr">"webRoot"</span>: <span class="string">"$&#123;workspaceFolder&#125;"</span>,</span><br><span class="line">            <span class="attr">"file"</span>: <span class="string">"$&#123;file&#125;"</span> <span class="comment">// 这一行是新增的</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="3-调试和运行"><a href="#3-调试和运行" class="headerlink" title="3.调试和运行"></a>3.调试和运行</h2><ul>
@@ -473,6 +476,62 @@
         <tag>VSCode</tag>
         <tag>HTML</tag>
         <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GithubPage-1.极简github入门和静态网页生成</title>
+    <url>/2020/06/23/GithubPage-1-%E6%9E%81%E7%AE%80github%E5%85%A5%E9%97%A8%E5%92%8C%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E7%94%9F%E6%88%90/</url>
+    <content><![CDATA[<h2 id="0-摘要"><a href="#0-摘要" class="headerlink" title="0. 摘要"></a>0. 摘要</h2><ul>
+<li><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3> 在github上创建一个仓库，并学会使用git和VSCode发布一个简单的GithubPage网页</li>
+<li><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li>创建github仓库</li>
+<li>在本地电脑初始化git并配置</li>
+<li>新建html网页并发布</li>
+</ol>
+</li>
+<li><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>代码和操作中的<code>[]</code>中的内容需要自己适应性修改</li>
+<li>本次示范不适合不使用<code>[YOUR_GITHUB_NAME].github.io</code>命名的代码仓库</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-创建github仓库"><a href="#1-创建github仓库" class="headerlink" title="1. 创建github仓库"></a>1. 创建github仓库</h2><ul>
+<li>在github网页右上角 <code>+ &gt; New Reposity</code></li>
+<li>创建一个名为<code>[YOUR_GITHUB_NAME].github.io</code>的代码仓库（PS: 这样的话生成github page后的访问域名为<code>https://[YOUR_GITHUB_NAME].github.io</code>，看起来像自己的官方网站）</li>
+<li>直接<code>Creat Reposity</code>不需要设置readme之类的</li>
+<li>复制一下代码仓库地址，比如我的是<code>https://github.com/innergeek/innergeek.github.io.git</code><h2 id="2-在本地初始化Git并配置"><a href="#2-在本地初始化Git并配置" class="headerlink" title="2. 在本地初始化Git并配置"></a>2. 在本地初始化Git并配置</h2><ul>
+<li>在电脑合适的地方创建一个文件夹，比如我的为<code>E:\blog\innergeek.github.io</code></li>
+<li>初始化Git</li>
+<li>在文件夹中 <code>右键 &gt; Git bash here</code></li>
+<li>在命令行中输入<code>git init</code></li>
+<li>关联到远端代码仓库在命令行中输入<code>git remote add origin https://github.com/[YOUR_GITHUB_NAME]/[YOUR_GITHUB_NAME].github.io.git</code>， 我的示范命令为`git remote add origin <a href="https://github.com/innergeek/innergeek.github.io.git" target="_blank" rel="noopener">https://github.com/innergeek/innergeek.github.io.git</a></li>
+<li>创建一个简单网页</li>
+<li>在文件夹中<code>右键 &gt; 通过 Code 打开</code></li>
+<li>创建一个<code>index.html</code>并保存，内容如下<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     hello github page</span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>发布</li>
+</ul>
+</li>
+<li>配置代码库的账号和密码（注意防止泄露）<ul>
+<li>在文件夹中找到<code>.git &gt; config</code>拖到VSCode中</li>
+<li>把以下内容<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   [remote &quot;origin&quot;]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;[YOUR_GITHUB_NAME]&#x2F;[YOUR_GITHUB_NAME].github.io.git</span><br><span class="line">fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br></pre></td></tr></table></figure>
+修改为<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   [remote &quot;origin&quot;]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;[YOUR_GITHUB_NAME]:[YOUR_GITHUB_PASSWORD]@github.com&#x2F;[YOUR_GITHUB_NAME]&#x2F;[YOUR_GITHUB_NAME].github.io.git</span><br><span class="line">fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br></pre></td></tr></table></figure>
+不要忘记了那个<code>:</code>和<code>@</code><br>我的示例为<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   [remote &quot;origin&quot;]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;WODEZHANGHAO:WODEMIMA@github.com&#x2F;innergeek&#x2F;innergeek.github.io.git</span><br><span class="line">fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br></pre></td></tr></table></figure></li>
+<li>Push并自动发布</li>
+</ul>
+</li>
+<li>Commit,在VSCode中点击<code>Source Control &gt; [输入提交的Commmit] &gt; 点那个对勾 &gt; 一路YES</code></li>
+<li>Push, 在VSCode点击<code>MoreAction(三个点的图标) &gt; PUSH &gt; 一路YES</code><ul>
+<li>查看成果</li>
+</ul>
+</li>
+<li>打开网页上的代码库并刷新一下，如果有<code>index.html</code>则提交OK</li>
+<li>检查发布情况，在github代码仓库中点击<code>Setting &gt; 找到GitHub Pages</code>，如果显示<code>ready to be published</code>则为正在生成，如果显示<code>Your site is published at https://innergeek.github.io/</code>则发布完成，点击网页连接查看发布效果</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>github</tag>
+        <tag>html</tag>
+        <tag>vscode</tag>
       </tags>
   </entry>
 </search>
