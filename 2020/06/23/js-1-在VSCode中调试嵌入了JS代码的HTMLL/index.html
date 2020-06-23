@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>js-1.在VSCode中调试嵌入了JS代码的HTML | Loong Egg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="0.摘要主题使用Debugger for Chrome实现在VSCode中调试嵌入了JS代码的HTML 步骤 创建项目文件 安装和配置Debugger for Chrome 运行和调试  1.创建项目文件1) 文件结构12345+[YOUR_PROJECT_FOLDER]|----index.html|----index.js  |---+.vscode    |----laubch.json #">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js-1.在VSCode中调试嵌入了JS代码的HTML">
+<meta property="og:url" content="https://loongegg.github.io/2020/06/23/js-1-%E5%9C%A8VSCode%E4%B8%AD%E8%B0%83%E8%AF%95%E5%B5%8C%E5%85%A5%E4%BA%86JS%E4%BB%A3%E7%A0%81%E7%9A%84HTMLL/index.html">
+<meta property="og:site_name" content="Loong Egg">
+<meta property="og:description" content="0.摘要主题使用Debugger for Chrome实现在VSCode中调试嵌入了JS代码的HTML 步骤 创建项目文件 安装和配置Debugger for Chrome 运行和调试  1.创建项目文件1) 文件结构12345+[YOUR_PROJECT_FOLDER]|----index.html|----index.js  |---+.vscode    |----laubch.json #">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-23T03:42:11.000Z">
+<meta property="article:modified_time" content="2020-06-23T03:57:41.750Z">
+<meta property="article:author" content="Loong Egg">
+<meta property="article:tag" content="VSCode">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="JS">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Loong Egg" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Loong Egg</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://LoongEgg.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js-1-在VSCode中调试嵌入了JS代码的HTMLL" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/23/js-1-%E5%9C%A8VSCode%E4%B8%AD%E8%B0%83%E8%AF%95%E5%B5%8C%E5%85%A5%E4%BA%86JS%E4%BB%A3%E7%A0%81%E7%9A%84HTMLL/" class="article-date">
+  <time datetime="2020-06-23T03:42:11.000Z" itemprop="datePublished">2020-06-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js-1.在VSCode中调试嵌入了JS代码的HTML
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0-摘要"><a href="#0-摘要" class="headerlink" title="0.摘要"></a>0.摘要</h2><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>使用<code>Debugger for Chrome</code>实现在VSCode中调试嵌入了JS代码的HTML</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li>创建项目文件</li>
+<li>安装和配置<code>Debugger for Chrome</code></li>
+<li>运行和调试</li>
+</ol>
+<h2 id="1-创建项目文件"><a href="#1-创建项目文件" class="headerlink" title="1.创建项目文件"></a>1.创建项目文件</h2><h3 id="1-文件结构"><a href="#1-文件结构" class="headerlink" title="1) 文件结构"></a>1) 文件结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+[YOUR_PROJECT_FOLDER]</span><br><span class="line">|----index.html</span><br><span class="line">|----index.js  </span><br><span class="line">|---+.vscode</span><br><span class="line">    |----laubch.json # 这个配置文件在安装插件时会自动插入</span><br></pre></td></tr></table></figure>
+<h3 id="2-index-html"><a href="#2-index-html" class="headerlink" title="2) index.html"></a>2) index.html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"index.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span>A Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>Try it<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-index-js"><a href="#3-index-js" class="headerlink" title="3) index.js"></a>3) index.js</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"My First JavaScript Function"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-安装和配置Debugger-for-Chrome"><a href="#2-安装和配置Debugger-for-Chrome" class="headerlink" title="2.安装和配置Debugger for Chrome"></a>2.安装和配置<code>Debugger for Chrome</code></h2><p>1) 在VSCode的扩展中搜索并安装<code>Debugger for Chrome</code><br>2) 配置出现的<code>launch.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</span><br><span class="line">    <span class="attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"chrome"</span>,</span><br><span class="line">            <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"Launch Chrome against localhost"</span>,</span><br><span class="line">            <span class="attr">"url"</span>: <span class="string">"http://localhost:8080"</span>,</span><br><span class="line">            <span class="attr">"webRoot"</span>: <span class="string">"$&#123;workspaceFolder&#125;"</span>,</span><br><span class="line">            <span class="attr">"file"</span>: <span class="string">"$&#123;file&#125;"</span> # 这一行是新增的</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-调试和运行"><a href="#3-调试和运行" class="headerlink" title="3.调试和运行"></a>3.调试和运行</h2><ul>
+<li>要在打开的当前文件<code>index.html</code>中<code>F5</code>运行</li>
+<li>在运行弹出的窗口选<code>chrome</code></li>
+<li>可以设置断点</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loongegg.github.io/2020/06/23/js-1-%E5%9C%A8VSCode%E4%B8%AD%E8%B0%83%E8%AF%95%E5%B5%8C%E5%85%A5%E4%BA%86JS%E4%BB%A3%E7%A0%81%E7%9A%84HTMLL/" data-id="ckbregf6600003cue491l1htk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VSCode/" rel="tag">VSCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">WPF/Xaml技巧-2.给自定义frameworkelement加上文字FormattedText</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-UDP/">C#/UDP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/">C#类型变换&扩展属性</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WPF-Xaml/">WPF/Xaml</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/netcore/" rel="tag">.netcore</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/" rel="tag">C#扩展属性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Event/" rel="tag">Event</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EventArgs/" rel="tag">EventArgs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVVM/" rel="tag">MVVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UDP/" rel="tag">UDP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VSCode/" rel="tag">VSCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WPF/" rel="tag">WPF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WSL/" rel="tag">WSL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xaml/" rel="tag">Xaml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-platform/" rel="tag">cross platform</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/" rel="tag">json</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linq/" rel="tag">linq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/netcore/" rel="tag">netcore</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/netcore/" style="font-size: 10px;">.netcore</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/C-%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/" style="font-size: 10px;">C#扩展属性</a> <a href="/tags/Event/" style="font-size: 10px;">Event</a> <a href="/tags/EventArgs/" style="font-size: 10px;">EventArgs</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/MVVM/" style="font-size: 13.33px;">MVVM</a> <a href="/tags/UDP/" style="font-size: 16.67px;">UDP</a> <a href="/tags/VSCode/" style="font-size: 16.67px;">VSCode</a> <a href="/tags/WPF/" style="font-size: 16.67px;">WPF</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/Xaml/" style="font-size: 10px;">Xaml</a> <a href="/tags/cross-platform/" style="font-size: 10px;">cross platform</a> <a href="/tags/json/" style="font-size: 16.67px;">json</a> <a href="/tags/linq/" style="font-size: 10px;">linq</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/netcore/" style="font-size: 10px;">netcore</a> <a href="/tags/string/" style="font-size: 13.33px;">string</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/23/js-1-%E5%9C%A8VSCode%E4%B8%AD%E8%B0%83%E8%AF%95%E5%B5%8C%E5%85%A5%E4%BA%86JS%E4%BB%A3%E7%A0%81%E7%9A%84HTMLL/">js-1.在VSCode中调试嵌入了JS代码的HTML</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/19/WPF-Xaml%E6%8A%80%E5%B7%A7-2-%E7%BB%99%E8%87%AA%E5%AE%9A%E4%B9%89frameworkelement%E5%8A%A0%E4%B8%8A%E6%96%87%E5%AD%97FormattedText/">WPF/Xaml技巧-2.给自定义frameworkelement加上文字FormattedText</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-2-byteArray%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-2.byteArray数组转为一个字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/18/C-%E7%B1%BB%E5%9E%8B%E5%8F%98%E6%8D%A2-1-%E5%8E%BB%E7%A9%BA%E6%A0%BC%E5%B9%B6%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">C#/类型变换-1.去空格并以指定字符分割字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/18/WPF-Xaml%E6%8A%80%E5%B7%A7-1-TypeConverter%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4/">WPF/Xaml技巧-1.TypeConverter实现自定义范围</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Loong Egg<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
